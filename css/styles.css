@@ -31,7 +31,8 @@ html {
 }
 /* SECTION ZERO = LANDING VIEW */
 #sec-0{
-    background: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)), url(../Images/banner.jpg) no-repeat top center/cover;
+    height: 700px;
+    background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(../Images/home.jpg) no-repeat top center/cover;
 }
 #sec-0 header.top {
     background-color: var(--haccent);
@@ -215,6 +216,9 @@ html {
 #sec-0 article h2 span{
     color: var(--haccent);
 }
+#sec-0 article h1 span{
+    color: var(--haccent);
+}
 #sec-0 article p{
     color: var(--txtaccent);
     margin-bottom: 3rem;
@@ -241,7 +245,7 @@ html {
     background-color: var(--txtaccent);
 }
 #sec-1 article{
-    padding-top: 20px;
+    padding: 20px;
     text-align: center;
 }
 #sec-1 article h1{
@@ -256,9 +260,13 @@ html {
     color: var(--textaccent3);
 }
 #sec-1 article p{
-    font-size: 0.85rem;
+    font-size: 1.05rem;
     text-align: justify;
     margin: 1.3rem 0px 1.1rem;
+    font-weight: 600;
+    color: #575454;
+    font-family: sans-serif;
+    
 }
 #sec-1 article a{
     color: var(--txtaccent);
@@ -805,14 +813,15 @@ text-shadow:1px 1px #73757E;
         justify-content: space-between;
     }
     #sec-1 article{
-        padding: 0px;
-        text-align: left;
-        width:51%;
-        display: flex;
+        padding: 50px;
         flex-flow: column nowrap;
         justify-content: center;
     }
-    #sec-1 article p{
+    #sec-1 article p {
+        font-size: larger;
+        font-family: sans-serif;
+        font-weight: 600;
+        color: #575454;
         padding-right: 1rem;
     }
     #sec-1 aside {
