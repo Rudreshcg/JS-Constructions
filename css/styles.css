@@ -31,7 +31,7 @@ html {
 }
 /* SECTION ZERO = LANDING VIEW */
 #sec-0{
-    height: 700px;
+    /* height: 700px; */
     background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(../Images/home.jpg) no-repeat top center/cover;
 }
 #sec-0 header.top {
@@ -754,11 +754,20 @@ text-shadow:1px 1px #73757E;
 }
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
+    #sec-0{
+        height: 700px;
+    }
+
+    #sec-0 article{
+        margin-top: 50px;
+    }
+
     html{
         font-size: 14px;
     }
     .container {
         width: 720px;
+
     }
     #sec-0 header.top {
         padding-top: 0px;
