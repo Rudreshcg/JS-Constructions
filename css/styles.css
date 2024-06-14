@@ -459,6 +459,13 @@ text-shadow:1px 1px #73757E;
     margin-bottom: 10px;
     width: 48%;
 }
+#sec-4 aside{
+    margin-bottom: 10px;
+}
+#sec-4 aside{
+    margin-bottom: 10px;
+}
+
 /* SECTION 5 */
 #sec-5{
     background: url(../Images/bg3.jpg) no-repeat center center/cover;
@@ -957,7 +964,7 @@ text-shadow:1px 1px #73757E;
     }
     #sec-4 .cont>img{
         width: 50%;
-        margin: 0px;
+        margin: 5px;
     }
     #sec-4 aside{
         display: flex;
