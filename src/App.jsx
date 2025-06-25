@@ -11,12 +11,13 @@ function App() {
   return (
     <Router>
       <Header />
-      <div style={{ padding: "2rem" }}>
+      <div>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/service" element={<Service />} />
           <Route path="/contact" element={<Contact />} />
+        
         </Routes>
       </div>
     </Router>

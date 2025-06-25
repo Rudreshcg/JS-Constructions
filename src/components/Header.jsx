@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import Logo from "./Logo";
 import { FiMenu } from "react-icons/fi";
-// import "./Header.css";
+import "./Header.css";
 
 function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -11,9 +11,11 @@ function Header() {
   return (
     <header className={`main-header-premium floating-header${menuOpen ? ' menu-open' : ''}`}>
       <div className="container header-container-premium">
-        <Logo />
+        <Link to="/" onClick={() => setMenuOpen(false)}>
+          <Logo />
+        </Link>
         <div className="header-actions">
-          <div className="header-contact">
+          <div className="header-contact hide-on-mobile">
             <span className="contact-icon">📞</span>
             <a href="tel:+919606125333" className="contact-number">(+91) 096061 25333</a>
           </div>
