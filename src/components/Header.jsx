@@ -1,41 +1,167 @@
-import React, { useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+"use client";
+import { useState } from "react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import Logo from "./Logo";
-import { FiMenu } from "react-icons/fi";
-import "./Header.css";
+import {
+  AppBar,
+  Toolbar,
+  IconButton,
+  Button,
+  Divider,
+  Box,
+  Drawer,
+  List,
+  ListItem,
+  ListItemButton,
+  ListItemText,
+  useMediaQuery,
+  useTheme,
+} from "@mui/material";
+import MenuIcon from "@mui/icons-material/Menu";
+import CloseIcon from "@mui/icons-material/Close";
 
-function Header() {
-  const [menuOpen, setMenuOpen] = useState(false);
-  const location = useLocation();
+const navLinks = [
+  { label: "Home", href: "/home" },
+  { label: "About Us", href: "/about" },
+  { label: "Services", href: "/service" },
+  { label: "Contact Us", href: "/contact" },
+];
+
+export default function Header() {
+  const [drawerOpen, setDrawerOpen] = useState(false);
+  const pathname = usePathname();
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
 
   return (
-    <header className={`main-header-premium floating-header${menuOpen ? ' menu-open' : ''}`}>
-      <div className="container header-container-premium">
-        <Link to="/" onClick={() => setMenuOpen(false)}>
-          <Logo />
-        </Link>
-        <div className="header-actions">
-          <div className="header-contact hide-on-mobile">
-            <span className="contact-icon">📞</span>
-            <a href="tel:+919606125333" className="contact-number">(+91) 096061 25333</a>
-          </div>
-          <button
-            className={`hamburger-btn${menuOpen ? ' open' : ''}`}
-            onClick={() => setMenuOpen((prev) => !prev)}
-            aria-label="Toggle navigation"
+    <>
+      <AppBar
+        position="sticky"
+        color="default"
+        elevation={0}
+        sx={{
+          bgcolor: "white",
+          color: "#595959",
+          width: "100%",
+          borderBottom: "1px solid #eee",
+        }}
+      >
+        <Toolbar
+          sx={{
+            maxWidth: "1200px",
+            margin: "0 auto",
+            width: "100%",
+            minHeight: "90px !important",
+            px: { xs: 1, md: 2 },
+            display: "flex",
+            justifyContent: "space-between",
+          }}
+        >
+          <Link href="/home" style={{ textDecoration: "none" }}>
+            <Logo />
+          </Link>
+          {/* Desktop Menu */}
+          <Box sx={{ display: { xs: "none", md: "flex" }, gap: 1 }}>
+            {navLinks.map((link) => (
+              <Link key={link.href} href={link.href} >
+                <Button
+                  component="a"
+                  sx={{
+                    color:
+                      pathname === link.href
+                        ? "#bfa055"
+                        : "#4A4A4A",
+                    fontWeight: pathname === link.href ? 700 : 500,
+                    fontSize: 16,
+                    px: 3,
+                    backgroundColor: "inherit",
+                    borderRadius: 0,
+                    "&:hover": {
+                      color: "#bfa055",
+                      backgroundColor: "inherit",
+                    },
+                  }}
+                >
+                  {link.label}
+                </Button>
+              </Link>
+            ))}
+          </Box>
+          {/* Mobile Menu Icon */}
+          <IconButton
+            edge="end"
+            color="inherit"
+            aria-label="menu"
+            sx={{
+              display: { xs: "flex", md: "none" },
+              color: drawerOpen ? "white" : "black",
+              zIndex: 1301,
+            }}
+            onClick={() => setDrawerOpen((open) => !open)}
           >
-            <FiMenu size={32} color="#000" />
-          </button>
-        </div>
-        <nav className={`nav-mobile${menuOpen ? ' open' : ''}`}> 
-          <Link to="/about" className={location.pathname === "/about" ? "active" : ""} onClick={() => setMenuOpen(false)}>About Us</Link>
-          <Link to="/service" className={location.pathname === "/service" ? "active" : ""} onClick={() => setMenuOpen(false)}>Services</Link>
-          <Link to="/contact" className={location.pathname === "/contact" ? "active" : ""} onClick={() => setMenuOpen(false)}>Contact Us</Link>
-        </nav>
-        {menuOpen && <div className="nav-overlay" onClick={() => setMenuOpen(false)}></div>}
-      </div>
-    </header>
+            {drawerOpen ? <CloseIcon /> : <MenuIcon />}
+          </IconButton>
+        </Toolbar>
+        <Divider sx={{ width: "100%" }} />
+      </AppBar>
+      {/* Mobile Drawer */}
+      <Drawer
+        anchor="top"
+        open={drawerOpen}
+        onClose={() => setDrawerOpen(false)}
+        PaperProps={{
+          sx: {
+            bgcolor: "black",
+            width: "100vw",
+            height: "100vh",
+            zIndex: 1300,
+          },
+        }}
+        transitionDuration={300}
+      >
+        <Box sx={{ width: "100vw", height: "100vh", pt: 8 }}>
+          <List>
+            {navLinks.map((link, idx) => (
+              <ListItem key={link.href} disablePadding>
+                <Link href={link.href} >
+                  <ListItemButton
+                    component="a"
+                    selected={pathname === link.href}
+                    onClick={() => setDrawerOpen(false)}
+                    sx={{
+                      color:
+                        pathname === link.href
+                          ? "#bfa055"
+                          : "white",
+                      justifyContent: "center",
+                      py: 2,
+                      fontSize: 22,
+                      "&:hover": {
+                        color: "#bfa055",
+                        backgroundColor: "inherit",
+                      },
+                    }}
+                  >
+                    <ListItemText
+                      primary={link.label}
+                      primaryTypographyProps={{
+                        align: "center",
+                        fontWeight: pathname === link.href ? 700 : 500,
+                        fontSize: 22,
+                        color:
+                          pathname === link.href
+                            ? "#bfa055"
+                            : "white",
+                      }}
+                    />
+                  </ListItemButton>
+                </Link>
+              </ListItem>
+            ))}
+          </List>
+        </Box>
+      </Drawer>
+    </>
   );
 }
-
-export default Header;
