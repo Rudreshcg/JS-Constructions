@@ -9,82 +9,313 @@ const tailored2 = "https://images.unsplash.com/photo-1503389152951-9c3d0c6b7a5a?
 
 export default function Page() {
   return (
-    <Box sx={{ bgcolor: '#f5f5f5', minHeight: '100vh', py: 6 }}>
-      {/* Hero Section - Residential Construction */}
-      <Box sx={{ position: 'relative', width: '100%', height: 400, mb: 6 }}>
+    <Box sx={{ bgcolor: "#f5f5f5", minHeight: "100vh", py: 6 }}>
+      {/* Hero Section */}
+      <Box sx={{ position: "relative", width: "100%", height: 400, mb: 8 }}>
         <img
           src={residentialImg}
           alt="Residential Construction"
-          style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+          style={{ width: "100%", height: "100%", objectFit: "cover" }}
         />
-        <Box sx={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', bgcolor: 'rgba(0,0,0,0.4)', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', color: 'white' }}>
-          <Typography variant="h3" sx={{ fontWeight: 700, mb: 2 }}>RESIDENTIAL CONSTRUCTION</Typography>
-          <Typography variant="h5" sx={{ mb: 2 }}>Elevate Your Living Experience</Typography>
-          <Typography variant="body1" sx={{ maxWidth: 600, mb: 3 }}>
-            At JS Construction, we create beautiful, durable, and functional homes tailored to your lifestyle and vision. Our residential construction services cover everything from modern apartments and luxury villas to custom-built houses. We focus on quality, transparency, and timely delivery to turn your dream home into reality.
+        <Box
+          sx={{
+            position: "absolute",
+            top: 0,
+            left: 0,
+            width: "100%",
+            height: "100%",
+            bgcolor: "rgba(0,0,0,0.45)",
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            justifyContent: "center",
+            color: "white",
+            textAlign: "center",
+            px: 2,
+          }}
+        >
+          <Typography variant="h3" sx={{ fontWeight: 900, mb: 2, letterSpacing: 1 }}>
+            Our Services
           </Typography>
-          <Button variant="contained" color="primary" sx={{ px: 4, py: 1.5, fontWeight: 600, borderRadius: 2, textTransform: 'none', fontSize: 18 }}>
-            SCHEDULE YOUR FREE CONSULTATION
-          </Button>
+          <Typography variant="h5" sx={{ mb: 2, fontWeight: 500 }}>
+            Residential, Commercial & Infrastructure Construction
+          </Typography>
+          <Typography variant="body1" sx={{ maxWidth: 700, mb: 3 }}>
+            JS Constructions delivers excellence across every sector. From dream homes to high-performance commercial spaces and robust infrastructure, our team brings expertise, innovation, and reliability to every project.
+          </Typography>
         </Box>
       </Box>
 
-      {/* Commercial Projects Section */}
-      <Grid container spacing={6} alignItems="center" sx={{ mb: 6 }}>
-        <Grid item xs={12} md={6}>
-          <Box>
-            <Typography variant="h4" sx={{ fontWeight: 700, mb: 2 }}>
-              Professional Commercial Project Delivery That Performs
-            </Typography>
-            <Typography variant="body1" sx={{ mb: 3 }}>
-              As a leading construction company, our commercial project services are tailored to help businesses, offices, and retail brands maximize their space, efficiency, and value. With 20+ years of experience, we know what it takes to create a commercial space that doesn't just look impressive—it performs.
-            </Typography>
-            <Button variant="outlined" color="primary" sx={{ px: 4, py: 1.5, fontWeight: 600, borderRadius: 2, textTransform: 'none', fontSize: 18 }}>
-              VIEW OUR RESULTS
-            </Button>
+      {/* Services Grid */}
+      <Grid container spacing={6} sx={{ maxWidth: 1300, mx: "auto", mb: 8 }}>
+        {/* Residential */}
+        <Grid item xs={12} md={4}>
+          <Box
+            sx={{
+              bgcolor: "#fff",
+              borderRadius: 4,
+              boxShadow: 3,
+              overflow: "hidden",
+              display: "flex",
+              flexDirection: "column",
+              height: "100%",
+              transition: "box-shadow 0.2s, transform 0.2s",
+              "&:hover": {
+                boxShadow: 8,
+                transform: "translateY(-8px) scale(1.03)",
+              },
+            }}
+          >
+            <Box sx={{ height: 220, overflow: "hidden" }}>
+              <img
+                src={residentialImg}
+                alt="Residential"
+                style={{ width: "100%", height: "100%", objectFit: "cover" }}
+              />
+            </Box>
+            <Box sx={{ p: 3, flexGrow: 1, display: "flex", flexDirection: "column" }}>
+              <Typography variant="h5" sx={{ fontWeight: 700, color: "#bfa046", mb: 1 }}>
+                Residential Construction
+              </Typography>
+              <Typography variant="body1" sx={{ color: "#444", mb: 2, flexGrow: 1 }}>
+                We build beautiful, durable, and functional homes tailored to your lifestyle and vision. From modern apartments to luxury villas, our focus is on quality, transparency, and timely delivery.
+              </Typography>
+              <Button
+                variant="contained"
+                sx={{
+                  background: "#bfa046",
+                  color: "#fff",
+                  fontWeight: 700,
+                  px: 3,
+                  py: 1.2,
+                  borderRadius: 2,
+                  textTransform: "none",
+                  "&:hover": {
+                    background: "#fff",
+                    color: "#bfa046",
+                    border: "2px solid #bfa046",
+                  },
+                }}
+              >
+                Learn More
+              </Button>
+            </Box>
           </Box>
         </Grid>
-        <Grid item xs={12} md={6}>
-          <Box sx={{ position: 'relative', width: '100%', height: 300 }}>
-            <img
-              src={commercialImg}
-              alt="Commercial Project"
-              style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: 12 }}
-            />
-            <Box sx={{ position: 'absolute', top: 16, left: 16, bgcolor: 'primary.main', color: 'white', px: 2, py: 1, borderRadius: 2, fontWeight: 700, fontSize: 20, boxShadow: 2 }}>
-              +2<br />
-              <span style={{ fontSize: 12, fontWeight: 400 }}>YEARS IN BUSINESS</span>
+        {/* Commercial */}
+        <Grid item xs={12} md={4}>
+          <Box
+            sx={{
+              bgcolor: "#fff",
+              borderRadius: 4,
+              boxShadow: 3,
+              overflow: "hidden",
+              display: "flex",
+              flexDirection: "column",
+              height: "100%",
+              transition: "box-shadow 0.2s, transform 0.2s",
+              "&:hover": {
+                boxShadow: 8,
+                transform: "translateY(-8px) scale(1.03)",
+              },
+            }}
+          >
+            <Box sx={{ height: 220, overflow: "hidden" }}>
+              <img
+                src={commercialImg}
+                alt="Commercial"
+                style={{ width: "100%", height: "100%", objectFit: "cover" }}
+              />
+            </Box>
+            <Box sx={{ p: 3, flexGrow: 1, display: "flex", flexDirection: "column" }}>
+              <Typography variant="h5" sx={{ fontWeight: 700, color: "#bfa046", mb: 1 }}>
+                Commercial Projects
+              </Typography>
+              <Typography variant="body1" sx={{ color: "#444", mb: 2, flexGrow: 1 }}>
+                We deliver high-performance commercial spaces for offices, retail, and businesses. Our team maximizes efficiency, value, and aesthetics to help your business thrive.
+              </Typography>
+              <Button
+                variant="contained"
+                sx={{
+                  background: "#bfa046",
+                  color: "#fff",
+                  fontWeight: 700,
+                  px: 3,
+                  py: 1.2,
+                  borderRadius: 2,
+                  textTransform: "none",
+                  "&:hover": {
+                    background: "#fff",
+                    color: "#bfa046",
+                    border: "2px solid #bfa046",
+                  },
+                }}
+              >
+                Learn More
+              </Button>
+            </Box>
+          </Box>
+        </Grid>
+        {/* Infrastructure */}
+        <Grid item xs={12} md={4}>
+          <Box
+            sx={{
+              bgcolor: "#fff",
+              borderRadius: 4,
+              boxShadow: 3,
+              overflow: "hidden",
+              display: "flex",
+              flexDirection: "column",
+              height: "100%",
+              transition: "box-shadow 0.2s, transform 0.2s",
+              "&:hover": {
+                boxShadow: 8,
+                transform: "translateY(-8px) scale(1.03)",
+              },
+            }}
+          >
+            <Box sx={{ height: 220, overflow: "hidden" }}>
+              <img
+                src={infrastructureImg}
+                alt="Infrastructure"
+                style={{ width: "100%", height: "100%", objectFit: "cover" }}
+              />
+            </Box>
+            <Box sx={{ p: 3, flexGrow: 1, display: "flex", flexDirection: "column" }}>
+              <Typography variant="h5" sx={{ fontWeight: 700, color: "#bfa046", mb: 1 }}>
+                Infrastructure Solutions
+              </Typography>
+              <Typography variant="body1" sx={{ color: "#444", mb: 2, flexGrow: 1 }}>
+                From roads and bridges to public utilities, we deliver robust, innovative, and sustainable infrastructure that stands the test of time and serves the community.
+              </Typography>
+              <Button
+                variant="contained"
+                sx={{
+                  background: "#bfa046",
+                  color: "#fff",
+                  fontWeight: 700,
+                  px: 3,
+                  py: 1.2,
+                  borderRadius: 2,
+                  textTransform: "none",
+                  "&:hover": {
+                    background: "#fff",
+                    color: "#bfa046",
+                    border: "2px solid #bfa046",
+                  },
+                }}
+              >
+                Learn More
+              </Button>
             </Box>
           </Box>
         </Grid>
       </Grid>
 
-      {/* Infrastructure Projects Section */}
-      <Grid container spacing={6} alignItems="center">
+      {/* Tailored Solutions Section */}
+      <Grid container spacing={6} sx={{ maxWidth: 1300, mx: "auto" }}>
         <Grid item xs={12} md={6}>
-          <Box sx={{ position: 'relative', width: '100%', height: 300 }}>
-            <img
-              src={infrastructureImg}
-              alt="Infrastructure Project"
-              style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: 12 }}
-            />
-            <Box sx={{ position: 'absolute', top: 16, left: 16, bgcolor: 'primary.main', color: 'white', px: 2, py: 1, borderRadius: 2, fontWeight: 700, fontSize: 20, boxShadow: 2 }}>
-              +5<br />
-              <span style={{ fontSize: 12, fontWeight: 400 }}>MAJOR PROJECTS</span>
+          <Box
+            sx={{
+              bgcolor: "#fff",
+              borderRadius: 4,
+              boxShadow: 3,
+              overflow: "hidden",
+              display: "flex",
+              flexDirection: "column",
+              height: "100%",
+              transition: "box-shadow 0.2s, transform 0.2s",
+              "&:hover": {
+                boxShadow: 8,
+                transform: "translateY(-8px) scale(1.03)",
+              },
+            }}
+          >
+            <Box sx={{ height: 220, overflow: "hidden" }}>
+              <img
+                src={tailored1}
+                alt="Tailored Solutions"
+                style={{ width: "100%", height: "100%", objectFit: "cover" }}
+              />
+            </Box>
+            <Box sx={{ p: 3, flexGrow: 1, display: "flex", flexDirection: "column" }}>
+              <Typography variant="h5" sx={{ fontWeight: 700, color: "#bfa046", mb: 1 }}>
+                Tailored Project Management
+              </Typography>
+              <Typography variant="body1" sx={{ color: "#444", mb: 2, flexGrow: 1 }}>
+                Every project is unique. We offer tailored project management and design-build solutions to ensure your vision is realized, on time and on budget.
+              </Typography>
+              <Button
+                variant="outlined"
+                sx={{
+                  borderColor: "#bfa046",
+                  color: "#bfa046",
+                  fontWeight: 700,
+                  px: 3,
+                  py: 1.2,
+                  borderRadius: 2,
+                  textTransform: "none",
+                  "&:hover": {
+                    background: "#bfa046",
+                    color: "#fff",
+                  },
+                }}
+              >
+                Discover More
+              </Button>
             </Box>
           </Box>
         </Grid>
         <Grid item xs={12} md={6}>
-          <Box>
-            <Typography variant="h4" sx={{ fontWeight: 700, mb: 2 }}>
-              Infrastructure Excellence, Built to Last
-            </Typography>
-            <Typography variant="body1" sx={{ mb: 3 }}>
-              Our infrastructure division delivers robust, innovative, and sustainable solutions for roads, bridges, railways, and public utilities. We combine advanced technology with proven expertise to ensure every project stands the test of time and serves the community for generations.
-            </Typography>
-            <Button variant="outlined" color="primary" sx={{ px: 4, py: 1.5, fontWeight: 600, borderRadius: 2, textTransform: 'none', fontSize: 18 }}>
-              SEE OUR INFRASTRUCTURE WORK
-            </Button>
+          <Box
+            sx={{
+              bgcolor: "#fff",
+              borderRadius: 4,
+              boxShadow: 3,
+              overflow: "hidden",
+              display: "flex",
+              flexDirection: "column",
+              height: "100%",
+              transition: "box-shadow 0.2s, transform 0.2s",
+              "&:hover": {
+                boxShadow: 8,
+                transform: "translateY(-8px) scale(1.03)",
+              },
+            }}
+          >
+            <Box sx={{ height: 220, overflow: "hidden" }}>
+              <img
+                src={tailored2}
+                alt="Client Collaboration"
+                style={{ width: "100%", height: "100%", objectFit: "cover" }}
+              />
+            </Box>
+            <Box sx={{ p: 3, flexGrow: 1, display: "flex", flexDirection: "column" }}>
+              <Typography variant="h5" sx={{ fontWeight: 700, color: "#bfa046", mb: 1 }}>
+                Client Collaboration
+              </Typography>
+              <Typography variant="body1" sx={{ color: "#444", mb: 2, flexGrow: 1 }}>
+                We work closely with you at every stage, ensuring open communication and a seamless experience from concept to completion.
+              </Typography>
+              <Button
+                variant="outlined"
+                sx={{
+                  borderColor: "#bfa046",
+                  color: "#bfa046",
+                  fontWeight: 700,
+                  px: 3,
+                  py: 1.2,
+                  borderRadius: 2,
+                  textTransform: "none",
+                  "&:hover": {
+                    background: "#bfa046",
+                    color: "#fff",
+                  },
+                }}
+              >
+                Discover More
+              </Button>
+            </Box>
           </Box>
         </Grid>
       </Grid>

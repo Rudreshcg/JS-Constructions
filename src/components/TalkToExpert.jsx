@@ -25,8 +25,8 @@ function TalkToExpert() {
             letterSpacing: 1,
             mb: 1,
             textAlign: "left",
-            fontFamily: "'Montserrat', Arial, sans-serif",
-            fontSize: { xs: 32, md: 48 },
+            fontSize: { xs: 28, md: 40 },
+            color: "#000", // Black heading
           }}
         >
           TALK TO OUR EXPERT
@@ -72,7 +72,17 @@ function TalkToExpert() {
               }}
               InputProps={{
                 disableUnderline: false,
-                sx: { fontSize: 18, pb: 1 },
+                sx: {
+                  fontSize: 18,
+                  pb: 1,
+                  color: "#222",
+                  "&:after": {
+                    borderBottom: "2px solid #bfa046", // Gold on focus
+                  },
+                  "&:focus-within": {
+                    borderBottom: "2px solid #bfa046",
+                  },
+                },
               }}
             />
             <TextField
@@ -86,7 +96,17 @@ function TalkToExpert() {
               }}
               InputProps={{
                 disableUnderline: false,
-                sx: { fontSize: 18, pb: 1 },
+                sx: {
+                  fontSize: 18,
+                  pb: 1,
+                  color: "#222",
+                  "&:after": {
+                    borderBottom: "2px solid #bfa046",
+                  },
+                  "&:focus-within": {
+                    borderBottom: "2px solid #bfa046",
+                  },
+                },
               }}
             />
             <TextField
@@ -100,7 +120,17 @@ function TalkToExpert() {
               }}
               InputProps={{
                 disableUnderline: false,
-                sx: { fontSize: 18, pb: 1 },
+                sx: {
+                  fontSize: 18,
+                  pb: 1,
+                  color: "#222",
+                  "&:after": {
+                    borderBottom: "2px solid #bfa046",
+                  },
+                  "&:focus-within": {
+                    borderBottom: "2px solid #bfa046",
+                  },
+                },
               }}
             />
             <TextField
@@ -115,14 +145,24 @@ function TalkToExpert() {
               }}
               InputProps={{
                 disableUnderline: false,
-                sx: { fontSize: 18, pb: 1 },
+                sx: {
+                  fontSize: 18,
+                  pb: 1,
+                  color: "#222",
+                  "&:after": {
+                    borderBottom: "2px solid #bfa046",
+                  },
+                  "&:focus-within": {
+                    borderBottom: "2px solid #bfa046",
+                  },
+                },
               }}
             />
             <Button
               type="submit"
               sx={{
                 mt: 2,
-                background: "#000",
+                background: "#bfa046", // Gold button
                 color: "#fff",
                 fontSize: 18,
                 letterSpacing: 4,
@@ -131,8 +171,9 @@ function TalkToExpert() {
                 py: 1.5,
                 width: 150,
                 "&:hover": {
-                  background: "#bfa055",
-                  color: "#000",
+                  background: "#fff",
+                  color: "#bfa046",
+                  border: "2px solid #bfa046",
                 },
               }}
             >
@@ -142,7 +183,7 @@ function TalkToExpert() {
           {/* Contact Info */}
           <Box
             sx={{
-              bgcolor: "#000",
+              bgcolor: "#bfa046",
               color: "#fff",
               p: { xs: 3, md: 5 },
               minWidth: 320,
@@ -162,6 +203,7 @@ function TalkToExpert() {
                   letterSpacing: 1,
                   mb: 1,
                   fontSize: 20,
+                  color: "#fff",
                 }}
               >
                 PHONE NUMBER
@@ -178,6 +220,7 @@ function TalkToExpert() {
                   letterSpacing: 1,
                   mb: 1,
                   fontSize: 20,
+                  color: "#fff",
                 }}
               >
                 ADDRESS INFO
