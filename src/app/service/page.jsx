@@ -8,6 +8,9 @@ import FormatPaintIcon from "@mui/icons-material/FormatPaint";
 import DesignServicesIcon from "@mui/icons-material/DesignServices";
 import AssignmentTurnedInIcon from "@mui/icons-material/AssignmentTurnedIn";
 // import EcoIcon from "@mui/icons-material/Eco";
+import ServiceImage from "../../assets/images/service.png"
+import Image from "next/image";
+import ServiceCard from "../../components/ServiceCard";
 
 const services = [
   {
@@ -54,132 +57,94 @@ const services = [
 
 export default function Page() {
   return (
-    <Box sx={{ bgcolor: "#f5f5f5", minHeight: "100vh", py: 6 }}>
+    <Box sx={{ bgcolor: "#f5f5f5", minHeight: "100vh", pb: 6 }}>
       {/* Hero Section */}
       <Box
         sx={{
           width: "100%",
-          minHeight: 340,
+          minHeight: 400,
+          position: "relative",
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
           flexDirection: "column",
-          background: "linear-gradient(90deg, #bfa046 0%, #fffbe6 100%)",
           mb: 8,
           px: 2,
         }}
       >
-        <Typography
-          variant="h2"
-          sx={{
-            fontWeight: 900,
-            color: "#222",
-            letterSpacing: 2,
-            mb: 2,
-            textAlign: "center",
-            textTransform: "uppercase",
-            fontSize: { xs: 32, md: 48 },
-          }}
-        >
-          Our Services
-        </Typography>
-        <Typography
-          variant="h5"
-          sx={{
-            color: "#444",
-            fontWeight: 500,
-            maxWidth: 700,
-            textAlign: "center",
-            mb: 1,
-          }}
-        >
-          Delivering end-to-end construction excellence with quality, safety, and professionalism.
-        </Typography>
-        <Typography
-          variant="body1"
-          sx={{
-            color: "#555",
-            maxWidth: 700,
-            textAlign: "center",
-            fontSize: { xs: 15, md: 17 },
-          }}
-        >
-          From concept to completion, JS Constructions brings expertise and innovation to every project—residential, commercial, and beyond.
-        </Typography>
+        <Box sx={{ position: "absolute", inset: 0, zIndex: 1 }}>
+          <Image
+            src={ServiceImage}
+            alt="Our Services"
+            fill
+            style={{ objectFit: "cover", objectPosition: "center" }}
+            priority
+          />
+          <Box
+            sx={{
+              position: "absolute",
+              inset: 0,
+              background: "linear-gradient(135deg, rgba(34,34,34,0.82) 0%, rgba(34,34,34,0.56) 100%)",
+            }}
+          />
+        </Box>
+        <Box sx={{ position: "relative", zIndex: 2, width: "100%" }}>
+          <Typography
+            variant="h2"
+            sx={{
+              fontWeight: 900,
+              color: "#fff",
+              letterSpacing: 2,
+              mb: 2,
+              textAlign: "center",
+              fontSize: { xs: 32, md: 48 },
+            }}
+          >
+            Our Services
+          </Typography>
+          <Typography
+            variant="h5"
+            sx={{
+              color: "#f5f5f5",
+              fontWeight: 500,
+              maxWidth: 700,
+              textAlign: "center",
+              mb: 1,
+              mx: "auto",
+            }}
+          >
+            Delivering end-to-end construction excellence with quality, safety, and professionalism.
+          </Typography>
+          <Typography
+            variant="body1"
+            sx={{
+              color: "#e0e0e0",
+              maxWidth: 700,
+              textAlign: "center",
+              fontSize: { xs: 15, md: 17 },
+              mx: "auto",
+            }}
+          >
+            From concept to completion, JS Constructions brings expertise and innovation to every project—residential, commercial, and beyond.
+          </Typography>
+        </Box>
       </Box>
-
       {/* Services Grid */}
       <Grid
         container
-        spacing={5}
+        spacing={{ xs: 3, md: 5 }}
         sx={{
           maxWidth: 1300,
           mx: "auto",
           mb: 8,
           px: { xs: 2, md: 0 },
+          display: 'flex',
+          justifyContent: 'center',
         }}
       >
         {services.map((service) => (
           <Grid item xs={12} sm={6} md={3} key={service.title}>
-            <Paper
-              elevation={4}
-              sx={{
-                p: 4,
-                borderRadius: 4,
-                height: "100%",
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
-                background: "#fff",
-                boxShadow: "0 4px 16px 0 rgba(191,160,70,0.08)",
-                transition: "transform 0.22s, box-shadow 0.22s",
-                "&:hover": {
-                  transform: "translateY(-10px) scale(1.04)",
-                  boxShadow: "0 12px 32px 0 rgba(191,160,70,0.18)",
-                },
-              }}
-            >
-              <Box
-                sx={{
-                  bgcolor: "#fffbe6",
-                  borderRadius: "50%",
-                  width: 90,
-                  height: 90,
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  mb: 2,
-                  boxShadow: "0 2px 8px 0 rgba(191,160,70,0.10)",
-                }}
-              >
-                {service.icon}
-              </Box>
-              <Typography
-                variant="h6"
-                sx={{
-                  fontWeight: 700,
-                  color: "#bfa046",
-                  mb: 1,
-                  textAlign: "center",
-                  textTransform: "uppercase",
-                  letterSpacing: 1,
-                  fontSize: 18,
-                }}
-              >
-                {service.title}
-              </Typography>
-              <Typography
-                variant="body2"
-                sx={{
-                  color: "#444",
-                  textAlign: "center",
-                  fontSize: 15,
-                  lineHeight: 1.7,
-                }}
-              >
-                {service.desc}
-              </Typography>
-            </Paper>
+            <ServiceCard icon={service.icon} title={service.title} desc={service.desc} />
           </Grid>
         ))}
       </Grid>

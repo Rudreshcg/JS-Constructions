@@ -50,7 +50,7 @@ export default function WhyJsConstruction() {
           color: "#ffd000",
           textAlign: "center",
           letterSpacing: 1,
-          fontSize: { xs: 28, md: 38 },
+          fontSize: { xs: 20, md: 30 },
           textTransform: "uppercase",
         }}
       >
