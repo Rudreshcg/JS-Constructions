@@ -1,323 +1,187 @@
 "use client";
-import { Box, Typography, Button, Grid } from "@mui/material";
+import { Box, Typography, Grid, Paper } from "@mui/material";
+import HomeWorkIcon from "@mui/icons-material/HomeWork";
+import BusinessIcon from "@mui/icons-material/Business";
+import BuildCircleIcon from "@mui/icons-material/BuildCircle";
+import FoundationIcon from "@mui/icons-material/Foundation";
+import FormatPaintIcon from "@mui/icons-material/FormatPaint";
+import DesignServicesIcon from "@mui/icons-material/DesignServices";
+import AssignmentTurnedInIcon from "@mui/icons-material/AssignmentTurnedIn";
+// import EcoIcon from "@mui/icons-material/Eco";
 
-const residentialImg = "https://lsuonline-static.s3.amazonaws.com/media/images/2021/08/02/blog-architecture-cs-civil-engeneering.jpg";
-const commercialImg = "https://t3.ftcdn.net/jpg/03/27/26/24/360_F_327262492_XRZBgztHB3NFGR3YfFrkRHIHeMYw6oZU.jpg";
-const infrastructureImg = "https://www.shutterstock.com/image-photo/double-exposure-team-railway-engineer-260nw-1957221109.jpg";
-const tailored1 = "https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?auto=format&fit=crop&w=800&q=80";
-const tailored2 = "https://images.unsplash.com/photo-1503389152951-9c3d0c6b7a5a?auto=format&fit=crop&w=800&q=80";
+const services = [
+  {
+    icon: <HomeWorkIcon sx={{ fontSize: 48, color: "#bfa046" }} />,
+    title: "Residential Construction",
+    desc: "Custom homes, villas, and apartment buildings built with quality and care.",
+  },
+  {
+    icon: <BusinessIcon sx={{ fontSize: 48, color: "#bfa046" }} />,
+    title: "Commercial Construction",
+    desc: "Office buildings, retail shops, warehouses, and malls for your business needs.",
+  },
+  {
+    icon: <BuildCircleIcon sx={{ fontSize: 48, color: "#bfa046" }} />,
+    title: "Renovation & Remodeling",
+    desc: "Upgrading old spaces with modern designs and quality materials.",
+  },
+  {
+    icon: <FoundationIcon sx={{ fontSize: 48, color: "#bfa046" }} />,
+    title: "Structural Work",
+    desc: "Concrete, steelwork, foundation laying, and framing for robust structures.",
+  },
+  {
+    icon: <FormatPaintIcon sx={{ fontSize: 48, color: "#bfa046" }} />,
+    title: "Interior & Exterior Finishing",
+    desc: "Painting, tiling, false ceilings, carpentry, flooring, cladding, and more.",
+  },
+  {
+    icon: <DesignServicesIcon sx={{ fontSize: 48, color: "#bfa046" }} />,
+    title: "Design & Planning",
+    desc: "Architectural design, 3D modeling, site layout, and Vastu compliance.",
+  },
+  {
+    icon: <AssignmentTurnedInIcon sx={{ fontSize: 48, color: "#bfa046" }} />,
+    title: "Project Management",
+    desc: "Cost estimation, scheduling, site supervision, and vendor coordination.",
+  },
+  // {
+  //   icon: <EcoIcon sx={{ fontSize: 48, color: "#bfa046" }} />,
+  //   title: "Sustainable & Green Building",
+  //   desc: "Eco-friendly materials, rainwater harvesting, and energy-efficient designs.",
+  // },
+];
 
 export default function Page() {
   return (
     <Box sx={{ bgcolor: "#f5f5f5", minHeight: "100vh", py: 6 }}>
       {/* Hero Section */}
-      <Box sx={{ position: "relative", width: "100%", height: 400, mb: 8 }}>
-        <img
-          src={residentialImg}
-          alt="Residential Construction"
-          style={{ width: "100%", height: "100%", objectFit: "cover" }}
-        />
-        <Box
+      <Box
+        sx={{
+          width: "100%",
+          minHeight: 340,
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          flexDirection: "column",
+          background: "linear-gradient(90deg, #bfa046 0%, #fffbe6 100%)",
+          mb: 8,
+          px: 2,
+        }}
+      >
+        <Typography
+          variant="h2"
           sx={{
-            position: "absolute",
-            top: 0,
-            left: 0,
-            width: "100%",
-            height: "100%",
-            bgcolor: "rgba(0,0,0,0.45)",
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            justifyContent: "center",
-            color: "white",
+            fontWeight: 900,
+            color: "#222",
+            letterSpacing: 2,
+            mb: 2,
             textAlign: "center",
-            px: 2,
+            textTransform: "uppercase",
+            fontSize: { xs: 32, md: 48 },
           }}
         >
-          <Typography variant="h3" sx={{ fontWeight: 900, mb: 2, letterSpacing: 1 }}>
-            Our Services
-          </Typography>
-          <Typography variant="h5" sx={{ mb: 2, fontWeight: 500 }}>
-            Residential, Commercial & Infrastructure Construction
-          </Typography>
-          <Typography variant="body1" sx={{ maxWidth: 700, mb: 3 }}>
-            JS Constructions delivers excellence across every sector. From dream homes to high-performance commercial spaces and robust infrastructure, our team brings expertise, innovation, and reliability to every project.
-          </Typography>
-        </Box>
+          Our Services
+        </Typography>
+        <Typography
+          variant="h5"
+          sx={{
+            color: "#444",
+            fontWeight: 500,
+            maxWidth: 700,
+            textAlign: "center",
+            mb: 1,
+          }}
+        >
+          Delivering end-to-end construction excellence with quality, safety, and professionalism.
+        </Typography>
+        <Typography
+          variant="body1"
+          sx={{
+            color: "#555",
+            maxWidth: 700,
+            textAlign: "center",
+            fontSize: { xs: 15, md: 17 },
+          }}
+        >
+          From concept to completion, JS Constructions brings expertise and innovation to every project—residential, commercial, and beyond.
+        </Typography>
       </Box>
 
       {/* Services Grid */}
-      <Grid container spacing={6} sx={{ maxWidth: 1300, mx: "auto", mb: 8 }}>
-        {/* Residential */}
-        <Grid item xs={12} md={4}>
-          <Box
-            sx={{
-              bgcolor: "#fff",
-              borderRadius: 4,
-              boxShadow: 3,
-              overflow: "hidden",
-              display: "flex",
-              flexDirection: "column",
-              height: "100%",
-              transition: "box-shadow 0.2s, transform 0.2s",
-              "&:hover": {
-                boxShadow: 8,
-                transform: "translateY(-8px) scale(1.03)",
-              },
-            }}
-          >
-            <Box sx={{ height: 220, overflow: "hidden" }}>
-              <img
-                src={residentialImg}
-                alt="Residential"
-                style={{ width: "100%", height: "100%", objectFit: "cover" }}
-              />
-            </Box>
-            <Box sx={{ p: 3, flexGrow: 1, display: "flex", flexDirection: "column" }}>
-              <Typography variant="h5" sx={{ fontWeight: 700, color: "#bfa046", mb: 1 }}>
-                Residential Construction
-              </Typography>
-              <Typography variant="body1" sx={{ color: "#444", mb: 2, flexGrow: 1 }}>
-                We build beautiful, durable, and functional homes tailored to your lifestyle and vision. From modern apartments to luxury villas, our focus is on quality, transparency, and timely delivery.
-              </Typography>
-              <Button
-                variant="contained"
+      <Grid
+        container
+        spacing={5}
+        sx={{
+          maxWidth: 1300,
+          mx: "auto",
+          mb: 8,
+          px: { xs: 2, md: 0 },
+        }}
+      >
+        {services.map((service) => (
+          <Grid item xs={12} sm={6} md={3} key={service.title}>
+            <Paper
+              elevation={4}
+              sx={{
+                p: 4,
+                borderRadius: 4,
+                height: "100%",
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+                background: "#fff",
+                boxShadow: "0 4px 16px 0 rgba(191,160,70,0.08)",
+                transition: "transform 0.22s, box-shadow 0.22s",
+                "&:hover": {
+                  transform: "translateY(-10px) scale(1.04)",
+                  boxShadow: "0 12px 32px 0 rgba(191,160,70,0.18)",
+                },
+              }}
+            >
+              <Box
                 sx={{
-                  background: "#bfa046",
-                  color: "#fff",
-                  fontWeight: 700,
-                  px: 3,
-                  py: 1.2,
-                  borderRadius: 2,
-                  textTransform: "none",
-                  "&:hover": {
-                    background: "#fff",
-                    color: "#bfa046",
-                    border: "2px solid #bfa046",
-                  },
+                  bgcolor: "#fffbe6",
+                  borderRadius: "50%",
+                  width: 90,
+                  height: 90,
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  mb: 2,
+                  boxShadow: "0 2px 8px 0 rgba(191,160,70,0.10)",
                 }}
               >
-                Learn More
-              </Button>
-            </Box>
-          </Box>
-        </Grid>
-        {/* Commercial */}
-        <Grid item xs={12} md={4}>
-          <Box
-            sx={{
-              bgcolor: "#fff",
-              borderRadius: 4,
-              boxShadow: 3,
-              overflow: "hidden",
-              display: "flex",
-              flexDirection: "column",
-              height: "100%",
-              transition: "box-shadow 0.2s, transform 0.2s",
-              "&:hover": {
-                boxShadow: 8,
-                transform: "translateY(-8px) scale(1.03)",
-              },
-            }}
-          >
-            <Box sx={{ height: 220, overflow: "hidden" }}>
-              <img
-                src={commercialImg}
-                alt="Commercial"
-                style={{ width: "100%", height: "100%", objectFit: "cover" }}
-              />
-            </Box>
-            <Box sx={{ p: 3, flexGrow: 1, display: "flex", flexDirection: "column" }}>
-              <Typography variant="h5" sx={{ fontWeight: 700, color: "#bfa046", mb: 1 }}>
-                Commercial Projects
-              </Typography>
-              <Typography variant="body1" sx={{ color: "#444", mb: 2, flexGrow: 1 }}>
-                We deliver high-performance commercial spaces for offices, retail, and businesses. Our team maximizes efficiency, value, and aesthetics to help your business thrive.
-              </Typography>
-              <Button
-                variant="contained"
+                {service.icon}
+              </Box>
+              <Typography
+                variant="h6"
                 sx={{
-                  background: "#bfa046",
-                  color: "#fff",
                   fontWeight: 700,
-                  px: 3,
-                  py: 1.2,
-                  borderRadius: 2,
-                  textTransform: "none",
-                  "&:hover": {
-                    background: "#fff",
-                    color: "#bfa046",
-                    border: "2px solid #bfa046",
-                  },
-                }}
-              >
-                Learn More
-              </Button>
-            </Box>
-          </Box>
-        </Grid>
-        {/* Infrastructure */}
-        <Grid item xs={12} md={4}>
-          <Box
-            sx={{
-              bgcolor: "#fff",
-              borderRadius: 4,
-              boxShadow: 3,
-              overflow: "hidden",
-              display: "flex",
-              flexDirection: "column",
-              height: "100%",
-              transition: "box-shadow 0.2s, transform 0.2s",
-              "&:hover": {
-                boxShadow: 8,
-                transform: "translateY(-8px) scale(1.03)",
-              },
-            }}
-          >
-            <Box sx={{ height: 220, overflow: "hidden" }}>
-              <img
-                src={infrastructureImg}
-                alt="Infrastructure"
-                style={{ width: "100%", height: "100%", objectFit: "cover" }}
-              />
-            </Box>
-            <Box sx={{ p: 3, flexGrow: 1, display: "flex", flexDirection: "column" }}>
-              <Typography variant="h5" sx={{ fontWeight: 700, color: "#bfa046", mb: 1 }}>
-                Infrastructure Solutions
-              </Typography>
-              <Typography variant="body1" sx={{ color: "#444", mb: 2, flexGrow: 1 }}>
-                From roads and bridges to public utilities, we deliver robust, innovative, and sustainable infrastructure that stands the test of time and serves the community.
-              </Typography>
-              <Button
-                variant="contained"
-                sx={{
-                  background: "#bfa046",
-                  color: "#fff",
-                  fontWeight: 700,
-                  px: 3,
-                  py: 1.2,
-                  borderRadius: 2,
-                  textTransform: "none",
-                  "&:hover": {
-                    background: "#fff",
-                    color: "#bfa046",
-                    border: "2px solid #bfa046",
-                  },
-                }}
-              >
-                Learn More
-              </Button>
-            </Box>
-          </Box>
-        </Grid>
-      </Grid>
-
-      {/* Tailored Solutions Section */}
-      <Grid container spacing={6} sx={{ maxWidth: 1300, mx: "auto" }}>
-        <Grid item xs={12} md={6}>
-          <Box
-            sx={{
-              bgcolor: "#fff",
-              borderRadius: 4,
-              boxShadow: 3,
-              overflow: "hidden",
-              display: "flex",
-              flexDirection: "column",
-              height: "100%",
-              transition: "box-shadow 0.2s, transform 0.2s",
-              "&:hover": {
-                boxShadow: 8,
-                transform: "translateY(-8px) scale(1.03)",
-              },
-            }}
-          >
-            <Box sx={{ height: 220, overflow: "hidden" }}>
-              <img
-                src={tailored1}
-                alt="Tailored Solutions"
-                style={{ width: "100%", height: "100%", objectFit: "cover" }}
-              />
-            </Box>
-            <Box sx={{ p: 3, flexGrow: 1, display: "flex", flexDirection: "column" }}>
-              <Typography variant="h5" sx={{ fontWeight: 700, color: "#bfa046", mb: 1 }}>
-                Tailored Project Management
-              </Typography>
-              <Typography variant="body1" sx={{ color: "#444", mb: 2, flexGrow: 1 }}>
-                Every project is unique. We offer tailored project management and design-build solutions to ensure your vision is realized, on time and on budget.
-              </Typography>
-              <Button
-                variant="outlined"
-                sx={{
-                  borderColor: "#bfa046",
                   color: "#bfa046",
-                  fontWeight: 700,
-                  px: 3,
-                  py: 1.2,
-                  borderRadius: 2,
-                  textTransform: "none",
-                  "&:hover": {
-                    background: "#bfa046",
-                    color: "#fff",
-                  },
+                  mb: 1,
+                  textAlign: "center",
+                  textTransform: "uppercase",
+                  letterSpacing: 1,
+                  fontSize: 18,
                 }}
               >
-                Discover More
-              </Button>
-            </Box>
-          </Box>
-        </Grid>
-        <Grid item xs={12} md={6}>
-          <Box
-            sx={{
-              bgcolor: "#fff",
-              borderRadius: 4,
-              boxShadow: 3,
-              overflow: "hidden",
-              display: "flex",
-              flexDirection: "column",
-              height: "100%",
-              transition: "box-shadow 0.2s, transform 0.2s",
-              "&:hover": {
-                boxShadow: 8,
-                transform: "translateY(-8px) scale(1.03)",
-              },
-            }}
-          >
-            <Box sx={{ height: 220, overflow: "hidden" }}>
-              <img
-                src={tailored2}
-                alt="Client Collaboration"
-                style={{ width: "100%", height: "100%", objectFit: "cover" }}
-              />
-            </Box>
-            <Box sx={{ p: 3, flexGrow: 1, display: "flex", flexDirection: "column" }}>
-              <Typography variant="h5" sx={{ fontWeight: 700, color: "#bfa046", mb: 1 }}>
-                Client Collaboration
+                {service.title}
               </Typography>
-              <Typography variant="body1" sx={{ color: "#444", mb: 2, flexGrow: 1 }}>
-                We work closely with you at every stage, ensuring open communication and a seamless experience from concept to completion.
-              </Typography>
-              <Button
-                variant="outlined"
+              <Typography
+                variant="body2"
                 sx={{
-                  borderColor: "#bfa046",
-                  color: "#bfa046",
-                  fontWeight: 700,
-                  px: 3,
-                  py: 1.2,
-                  borderRadius: 2,
-                  textTransform: "none",
-                  "&:hover": {
-                    background: "#bfa046",
-                    color: "#fff",
-                  },
+                  color: "#444",
+                  textAlign: "center",
+                  fontSize: 15,
+                  lineHeight: 1.7,
                 }}
               >
-                Discover More
-              </Button>
-            </Box>
-          </Box>
-        </Grid>
+                {service.desc}
+              </Typography>
+            </Paper>
+          </Grid>
+        ))}
       </Grid>
     </Box>
   );
