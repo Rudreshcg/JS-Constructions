@@ -1,4 +1,4 @@
-const repoName = 'gruham-construction';
+const repoName = 'JS-Constructions';
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
