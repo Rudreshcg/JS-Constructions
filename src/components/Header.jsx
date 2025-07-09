@@ -66,7 +66,7 @@ export default function Header() {
             {navLinks.map((link) => (
               <Link key={link.href} href={link.href} >
                 <Button
-                  component="a"
+                  
                   sx={{
                     color:
                       pathname === link.href
@@ -126,7 +126,7 @@ export default function Header() {
               <ListItem key={link.href} disablePadding>
                 <Link href={link.href} >
                   <ListItemButton
-                    component="a"
+                    
                     selected={pathname === link.href}
                     onClick={() => setDrawerOpen(false)}
                     sx={{

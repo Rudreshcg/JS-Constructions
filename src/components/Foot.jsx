@@ -42,7 +42,7 @@ export default function Foot() {
         <Box sx={{ display: "flex", gap: 3, mt: { xs: 2, md: 0 } }}>
           <Link href="/home">
             <Typography
-              component="a"
+
               sx={{
                 color: "grey.100",
                 textDecoration: "none",
@@ -58,7 +58,7 @@ export default function Foot() {
           </Link>
           <Link href="/about" >
             <Typography
-              component="a"
+
               sx={{
                 color: "grey.100",
                 textDecoration: "none",
@@ -74,7 +74,7 @@ export default function Foot() {
           </Link>
           <Link href="/service" >
             <Typography
-              component="a"
+
               sx={{
                 color: "grey.100",
                 textDecoration: "none",
@@ -90,7 +90,7 @@ export default function Foot() {
           </Link>
           <Link href="/contact" >
             <Typography
-              component="a"
+
               sx={{
                 color: "grey.100",
                 textDecoration: "none",
