@@ -64,9 +64,8 @@ export default function Header() {
           {/* Desktop Menu */}
           <Box sx={{ display: { xs: "none", md: "flex" }, gap: 1 }}>
             {navLinks.map((link) => (
-              <Link key={link.href} href={link.href} >
+              <Link key={link.href} href={link.href} style={{ textDecoration: "none" }}>
                 <Button
-                  
                   sx={{
                     color:
                       pathname === link.href
@@ -77,6 +76,7 @@ export default function Header() {
                     px: 3,
                     backgroundColor: "inherit",
                     borderRadius: 0,
+                    textTransform: "none",
                     "&:hover": {
                       color: "#bfa055",
                       backgroundColor: "inherit",
@@ -124,9 +124,8 @@ export default function Header() {
           <List>
             {navLinks.map((link, idx) => (
               <ListItem key={link.href} disablePadding>
-                <Link href={link.href} >
+                <Link href={link.href} style={{ textDecoration: "none", width: "100%" }}>
                   <ListItemButton
-                    
                     selected={pathname === link.href}
                     onClick={() => setDrawerOpen(false)}
                     sx={{

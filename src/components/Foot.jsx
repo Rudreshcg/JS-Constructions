@@ -40,12 +40,10 @@ export default function Foot() {
           </Typography>
         </Box>
         <Box sx={{ display: "flex", gap: 3, mt: { xs: 2, md: 0 } }}>
-          <Link href="/home">
+          <Link href="/home" style={{ textDecoration: "none" }}>
             <Typography
-
               sx={{
                 color: "grey.100",
-                textDecoration: "none",
                 fontWeight: 500,
                 letterSpacing: 1,
                 px: 1,
@@ -56,12 +54,10 @@ export default function Foot() {
               Home
             </Typography>
           </Link>
-          <Link href="/about" >
+          <Link href="/about" style={{ textDecoration: "none" }}>
             <Typography
-
               sx={{
                 color: "grey.100",
-                textDecoration: "none",
                 fontWeight: 500,
                 letterSpacing: 1,
                 px: 1,
@@ -72,12 +68,10 @@ export default function Foot() {
               About
             </Typography>
           </Link>
-          <Link href="/service" >
+          <Link href="/service" style={{ textDecoration: "none" }}>
             <Typography
-
               sx={{
                 color: "grey.100",
-                textDecoration: "none",
                 fontWeight: 500,
                 letterSpacing: 1,
                 px: 1,
@@ -88,12 +82,10 @@ export default function Foot() {
               Services
             </Typography>
           </Link>
-          <Link href="/contact" >
+          <Link href="/contact" style={{ textDecoration: "none" }}>
             <Typography
-
               sx={{
                 color: "grey.100",
-                textDecoration: "none",
                 fontWeight: 500,
                 letterSpacing: 1,
                 px: 1,
