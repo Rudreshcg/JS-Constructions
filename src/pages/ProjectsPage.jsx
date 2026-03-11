@@ -1,12 +1,32 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { projects } from '../data/projects';
+import SEO from '../components/SEO';
+
+const projectsSchema = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "Our Projects | JS Constructions",
+  "url": "https://www.jsconstructions22.in/projects",
+  "description": "Browse JS Constructions' portfolio of completed and ongoing residential and commercial projects across Bengaluru.",
+  "publisher": {
+    "@type": "Organization",
+    "name": "JS Constructions",
+    "url": "https://www.jsconstructions22.in"
+  }
+};
 
 const ProjectsPage = () => {
   const navigate = useNavigate();
 
   return (
     <div className="projects-page">
+      <SEO
+        title="Our Projects | JS Constructions Bengaluru"
+        description="Explore JS Constructions' portfolio of premium residential and commercial projects in Bengaluru — luxury villas, duplex homes, and commercial campuses."
+        canonical="https://www.jsconstructions22.in/projects"
+        schema={projectsSchema}
+      />
       {/* Hero Banner */}
       <div className="page-hero">
         <div className="page-hero-overlay" style={{ backgroundImage: 'url(/assets/hero-bg-v2.png)' }}></div>

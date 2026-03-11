@@ -1,6 +1,7 @@
 import React from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { projects } from '../data/projects';
+import SEO from '../components/SEO';
 
 const ProjectDetail = () => {
   const { id } = useParams();
@@ -16,10 +17,34 @@ const ProjectDetail = () => {
     );
   }
 
+  const projectSchema = {
+    "@context": "https://schema.org",
+    "@type": "CreativeWork",
+    "name": project.title,
+    "url": `https://www.jsconstructions22.in/projects/${project.id}`,
+    "image": `https://www.jsconstructions22.in${project.image}`,
+    "description": project.description,
+    "creator": {
+      "@type": "Organization",
+      "name": "JS Constructions",
+      "url": "https://www.jsconstructions22.in"
+    },
+    "locationCreated": {
+      "@type": "Place",
+      "name": project.location
+    }
+  };
+
   const others = projects.filter(p => p.id !== id).slice(0, 3);
 
   return (
     <div className="project-detail-page">
+      <SEO
+        title={`${project.title} | JS Constructions`}
+        description={`${project.title} — ${project.category} project in ${project.location}. ${project.description?.slice(0, 120)}...`}
+        canonical={`https://www.jsconstructions22.in/projects/${project.id}`}
+        schema={projectSchema}
+      />
       {/* Hero Image */}
       <div className="detail-hero" style={{ backgroundImage: `url(${project.image})` }}>
         <div className="detail-hero-overlay"></div>

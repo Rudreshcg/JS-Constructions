@@ -1,4 +1,22 @@
 import React from 'react';
+import SEO from '../components/SEO';
+
+const aboutSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "JS Constructions",
+  "url": "https://www.jsconstructions22.in",
+  "logo": "https://www.jsconstructions22.in/assets/logo.jpg",
+  "foundingDate": "2008",
+  "description": "JS Constructions was founded in 2008 in Bengaluru. We specialize in premium residential and commercial construction.",
+  "telephone": "+91-7676534573",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Bengaluru",
+    "addressRegion": "Karnataka",
+    "addressCountry": "IN"
+  }
+};
 
 const AboutUs = () => {
   const values = [
@@ -10,6 +28,12 @@ const AboutUs = () => {
 
   return (
     <div className="about-page">
+      <SEO
+        title="About Us | JS Constructions Bengaluru"
+        description="Learn about JS Constructions — founded in 2008 in Bengaluru. We specialize in luxury residences, commercial buildings, and more with a team of certified experts."
+        canonical="https://www.jsconstructions22.in/about"
+        schema={aboutSchema}
+      />
       {/* Hero Banner */}
       <div className="page-hero">
         <div className="page-hero-overlay" style={{ backgroundImage: 'url(/assets/hero-bg-v2.png)' }}></div>
