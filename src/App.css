@@ -1,0 +1,4 @@
+/* Component-specific overrides can go here */
+.app-container {
+  overflow-x: hidden;
+}

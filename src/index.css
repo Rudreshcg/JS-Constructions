@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Inter:wght@400;500;600&display=swap');
+
+:root {
+  --primary: #0A1D37; /* Deep Navy */
+  --secondary: #c5601a; /* Deep Orange */
+  --accent: #ee7723;    /* Construction Orange */
+  --text-primary: #1A1A1A;
+  --text-secondary: #4A4A4A;
+  --text-light: #F8F9FA;
+  --bg-light: #FFFFFF;
+  --bg-soft: #F4F7FA;
+  --bg-dark: #0A1D37;
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  --font-heading: 'Outfit', sans-serif;
+  --font-body: 'Inter', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--text-primary);
+  background-color: var(--bg-light);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: var(--transition);
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  font-family: var(--font-body);
+  transition: var(--transition);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Utility Classes */
+.btn-primary {
+  background-color: var(--accent);
+  color: white;
+  padding: 0.85rem 2rem;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+  display: inline-block;
+  transition: var(--transition);
+}
+
+.btn-primary:hover {
+  background-color: #d66518;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(238, 119, 35, 0.35);
+}
+
+/* White outline — used on dark backgrounds (e.g. Hero) */
+.btn-outline {
+  border: 2px solid white;
+  color: white;
+  background: transparent;
+  padding: 0.75rem 1.8rem;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+  transition: var(--transition);
+}
+
+.btn-outline:hover {
+  background-color: white;
+  color: var(--primary);
+  transform: translateY(-2px);
+}
+
+/* Dark outline — for use on light backgrounds */
+.btn-outline-dark {
+  border: 2px solid var(--primary);
+  color: var(--primary);
+  background: transparent;
+  padding: 0.75rem 1.8rem;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  transition: var(--transition);
+}
+
+.btn-outline-dark:hover {
+  background-color: var(--primary);
+  color: white;
+}
+
+/* Global Section Styles */
+.section-header {
+  margin-bottom: 3.5rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-center .section-subtitle {
+  margin: 0 auto;
+}
+
+.section-title {
+  font-size: 2.8rem;
+  color: var(--primary);
+  margin-bottom: 1rem;
+  line-height: 1.15;
+}
+
+.section-subtitle {
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  max-width: 580px;
+  line-height: 1.7;
+}
+
+.highlight-dark {
+  color: var(--accent);
+}
+
+.highlight {
+  color: var(--accent);
+}
+
+.section-padding {
+  padding: 90px 0;
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Smooth image rendering */
+img {
+  display: block;
+  max-width: 100%;
+}
+
+@media (max-width: 992px) {
+  .page-hero h1 { font-size: 2.4rem; }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1.2rem;
+  }
+  .section-padding {
+    padding: 60px 0;
+  }
+  .page-hero {
+    height: 300px;
+    padding-top: 70px;
+  }
+  .page-hero h1 { font-size: 2rem; }
+  .page-hero p { font-size: 0.95rem; }
+}
+
+@media (max-width: 480px) {
+  .page-hero h1 { font-size: 1.7rem; }
+  .btn-primary, .btn-outline {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.85rem;
+  }
+}
+
+/* --- Page Hero (inner pages) --- */
+.page-hero {
+  height: 380px;
+  margin-top: 0; /* extends behind the fixed navbar */
+  padding-top: 80px; /* push content below navbar */
+  position: relative;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(to right, #0A1D37, #1a3a6b);
+  overflow: hidden;
+}
+
+.page-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.2;
+}
+
+.page-hero .container {
+  position: relative;
+  z-index: 1;
+}
+
+.page-hero h1 {
+  font-size: 3rem;
+  color: white;
+  margin-bottom: 0.5rem;
+}
+
+.page-hero h1 span {
+  color: #ee7723;
+}
+
+.page-hero p {
+  color: #ccc;
+  font-size: 1.1rem;
+}
+
+/* --- Animations & Reveal --- */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  visibility: hidden;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible;
+}
+
+.delay-100 { transition-delay: 100ms; }
+.delay-200 { transition-delay: 200ms; }
+.delay-300 { transition-delay: 300ms; }
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+.float-animation {
+  animation: float 4s ease-in-out infinite;
+}
+
+@keyframes pulse-glow {
+  0% { box-shadow: 0 0 0 0 rgba(238, 119, 35, 0.4); }
+  70% { box-shadow: 0 0 0 15px rgba(238, 119, 35, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(238, 119, 35, 0); }
+}
+
+.btn-primary:focus {
+  animation: pulse-glow 1.5s ease infinite;
+}
