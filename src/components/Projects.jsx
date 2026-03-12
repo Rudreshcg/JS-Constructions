@@ -3,19 +3,24 @@ import React from 'react';
 const Projects = () => {
   const projects = [
     {
-      title: "Luxury Modern Villa",
-      category: "Residential",
-      image: "/assets/project-1-v2.png"
+      title: "Residential Duplex",
+      category: "Residential · Indiranagar, Bangalore",
+      image: "/assets/blr-house-1.png"
     },
     {
-      title: "Smart Tech Skyscraper",
-      category: "Commercial",
-      image: "/assets/project-2-v2.png"
+      title: "Independent House",
+      category: "Residential · Jayanagar, Bangalore",
+      image: "/assets/blr-house-2.png"
     },
     {
-      title: "Grand Suspension Bridge",
-      category: "Infrastructure",
-      image: "/assets/project-3-v2.png"
+      title: "Modern Duplex Home",
+      category: "Residential · Whitefield, Bangalore",
+      image: "/assets/blr-house-3.png"
+    },
+    {
+      title: "Classic Home Build",
+      category: "Residential · JP Nagar, Bangalore",
+      image: "/assets/blr-house-4.png"
     }
   ];
 
