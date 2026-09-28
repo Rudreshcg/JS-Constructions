@@ -27,7 +27,7 @@ const CtaBanner = () => {
           position: relative;
           padding: 80px 0;
           overflow: hidden;
-          background: linear-gradient(135deg, #0A1D37 0%, #1a3a6b 50%, #0A1D37 100%);
+          background: linear-gradient(135deg, var(--primary) 0%, #1a3a6b 50%, var(--primary) 100%);
         }
 
         .cta-bg {
@@ -54,7 +54,7 @@ const CtaBanner = () => {
           line-height: 1.2;
         }
 
-        .cta-text h2 span { color: #ee7723; }
+        .cta-text h2 span { color: var(--accent); }
 
         .cta-text p {
           color: rgba(255,255,255,0.7);
@@ -70,8 +70,8 @@ const CtaBanner = () => {
         }
 
         .cta-btn-primary {
-          background: #ee7723;
-          color: #0A1D37;
+          background: var(--accent);
+          color: var(--primary);
           padding: 1rem 2rem;
           border-radius: 6px;
           font-weight: 700;

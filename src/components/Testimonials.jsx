@@ -60,14 +60,21 @@ const Testimonials = () => {
         }
 
         .testimonial-card {
-          padding: 3rem;
+          padding: 3rem 2.5rem;
           background: white;
-          border-radius: 12px;
-          box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+          border-radius: 0px;
+          border: 1px solid rgba(0,0,0,0.04);
+          transition: all 0.4s ease;
           position: relative;
-          border-left: 4px solid var(--accent);
           display: flex;
           flex-direction: column;
+        }
+
+        .testimonial-card:hover {
+          background: var(--bg-soft);
+          transform: translateY(-5px);
+          box-shadow: 0 15px 40px rgba(0,0,0,0.03);
+          border-color: rgba(184,35,41,0.2);
         }
 
         .testimonial-text {

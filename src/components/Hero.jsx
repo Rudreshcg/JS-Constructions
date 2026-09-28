@@ -9,14 +9,12 @@ const Hero = () => {
       <div className="hero-overlay"></div>
       <div className="container hero-container">
         <div className="hero-content">
-          <span className="hero-tag float-animation">EXCELLENCE IN CONSTRUCTION</span>
+          <span className="hero-tag float-animation">A NEW STANDARD OF LUXURY</span>
           <h1 className="hero-title">
-            We Build Your <span className="highlight">Future</span> <br /> 
-            With Precision.
+            Crafting Spaces of <span className="highlight">Distinction</span>
           </h1>
           <p className="hero-subtitle">
-            Leading the way in modern architecture and engineering. 
-            From luxury villas to massive industrial projects, we deliver perfection.
+            Bespoke architecture and masterful engineering. We create legacy homes and commercial spaces defined by uncompromising quality and timeless elegance.
           </p>
           <div className="hero-btns">
             <button className="btn-primary" onClick={() => navigate('/projects')}>OUR PROJECTS</button>
@@ -28,21 +26,19 @@ const Hero = () => {
       <style jsx>{`
         .hero {
           height: 100vh;
-          /* Background image is now set via inline style for dynamic updates */
-          /* background: url('/assets/hero-bg.png') center/cover no-repeat; */
           position: relative;
           display: flex;
           align-items: center;
           color: white;
+          background-size: cover;
+          background-position: center;
+          background-attachment: fixed;
         }
 
         .hero-overlay {
           position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          background: linear-gradient(to right, rgba(10, 29, 55, 0.8), rgba(10, 29, 55, 0.4));
+          top: 0; left: 0; width: 100%; height: 100%;
+          background: linear-gradient(to right, rgba(12, 18, 43, 0.9), rgba(12, 18, 43, 0.4));
           z-index: 1;
         }
 
@@ -53,10 +49,12 @@ const Hero = () => {
         }
 
         .hero-subtitle {
-          color: var(--accent);
-          letter-spacing: 4px;
-          margin-bottom: 1rem;
-          font-weight: 600;
+          color: rgba(255, 255, 255, 0.8);
+          font-size: 1.15rem;
+          line-height: 1.8;
+          font-weight: 300;
+          margin-bottom: 2.5rem;
+          max-width: 600px;
         }
 
         .hero-title {
@@ -69,11 +67,13 @@ const Hero = () => {
           color: var(--accent);
         }
 
-        .hero-description {
-          font-size: 1.2rem;
-          margin-bottom: 2.5rem;
-          opacity: 0.9;
-          max-width: 600px;
+        .hero-tag {
+          font-size: 0.8rem;
+          letter-spacing: 4px;
+          color: var(--accent);
+          text-transform: uppercase;
+          margin-bottom: 1.5rem;
+          display: block;
         }
 
         .hero-btns {

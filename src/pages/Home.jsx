@@ -26,7 +26,7 @@ const homeSchema = {
       "@type": "LocalBusiness",
       "name": "JS Constructions",
       "url": "https://www.jsconstructions22.in",
-      "logo": "https://www.jsconstructions22.in/assets/logo.jpg",
+      "logo": "https://www.jsconstructions22.in/assets/js%20logo%20round.png",
       "image": "https://www.jsconstructions22.in/assets/hero-bg-v2.png",
       "description": "JS Constructions offers premium residential and commercial construction services in Bengaluru since 2008.",
       "telephone": "+91-7676534573",

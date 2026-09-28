@@ -75,17 +75,18 @@ const Services = () => {
         }
 
         .service-card {
-          padding: 3rem;
-          border-radius: 12px;
-          transition: var(--transition);
+          padding: 3rem 2.5rem;
+          border-radius: 0px;
           background: white;
-          box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+          transition: all 0.4s ease;
+          border: 1px solid rgba(0,0,0,0.04);
         }
 
         .service-card:hover {
-          transform: translateY(-10px);
-          background: var(--primary);
-          color: white;
+          background: var(--bg-light);
+          transform: translateY(-5px);
+          box-shadow: 0 15px 40px rgba(0,0,0,0.03);
+          border-color: rgba(184,35,41,0.2);
         }
 
         .service-icon {
@@ -93,13 +94,19 @@ const Services = () => {
           margin-bottom: 2rem;
         }
 
-        .service-card:hover .service-icon {
-          color: var(--accent);
+        .service-icon svg {
+          transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .service-card:hover .service-icon svg {
+          transform: rotate(360deg);
         }
 
         .service-card-title {
           margin-bottom: 1rem;
           font-size: 1.5rem;
+          color: var(--primary);
+          font-weight: 400;
         }
 
         .service-card-text {

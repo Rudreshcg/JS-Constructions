@@ -24,13 +24,12 @@ const Navbar = () => {
       <div className="container nav-container">
         {/* Logo */}
         <Link to="/" className="logo">
-          <img src="/assets/logo.jpg" alt="JS Constructions" className="logo-img" />
+          <img src="/assets/js%20logo%20round.png" alt="JS Constructions" className="logo-img" />
         </Link>
 
         {/* Desktop Nav Links */}
         <ul className="nav-links">
-          <li><Link to="/" className={isActive('/')}>HOME</Link></li>
-          <li><Link to="/about" className={isActive('/about')}>ABOUT US</Link></li>
+          <li><Link to="/our-business" className={isActive('/our-business')}>OUR BUSINESS</Link></li>
           <li><Link to="/projects" className={isActive('/projects')}>PROJECTS</Link></li>
           <li><Link to="/contact" className={isActive('/contact')}>CONTACT US</Link></li>
         </ul>
@@ -56,8 +55,7 @@ const Navbar = () => {
       {/* Mobile Menu */}
       <div className={`mobile-menu ${menuOpen ? 'open' : ''}`}>
         <ul>
-          <li><Link to="/" className={isActive('/')}>HOME</Link></li>
-          <li><Link to="/about" className={isActive('/about')}>ABOUT US</Link></li>
+          <li><Link to="/our-business" className={isActive('/our-business')}>OUR BUSINESS</Link></li>
           <li><Link to="/projects" className={isActive('/projects')}>PROJECTS</Link></li>
           <li><Link to="/contact" className={isActive('/contact')}>CONTACT US</Link></li>
           <li><a href="tel:+917676534573" className="mobile-phone">(+91) 7676534573</a></li>
@@ -79,10 +77,12 @@ const Navbar = () => {
 
         .navbar.scrolled,
         .navbar.menu-open {
-          background: white;
+          background: rgba(12, 18, 43, 0.9);
+          backdrop-filter: blur(10px);
           padding: 0.8rem 0;
-          color: var(--primary);
-          box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+          color: white;
+          box-shadow: 0 4px 30px rgba(0,0,0,0.1);
+          border-bottom: 1px solid rgba(255,255,255,0.05);
         }
 
         .nav-container {
@@ -113,10 +113,12 @@ const Navbar = () => {
         }
 
         .nav-links a {
-          font-size: 0.85rem;
-          font-weight: 600;
-          letter-spacing: 1px;
+          font-size: 0.75rem;
+          font-weight: 400;
+          letter-spacing: 2px;
+          text-transform: uppercase;
           transition: color 0.3s ease;
+          color: white;
         }
 
         .nav-links a:hover {
@@ -140,9 +142,11 @@ const Navbar = () => {
           display: flex;
           align-items: center;
           gap: 6px;
-          font-size: 0.85rem;
-          font-weight: 600;
+          font-size: 0.75rem;
+          font-weight: 400;
+          letter-spacing: 1px;
           white-space: nowrap;
+          color: white;
         }
 
         /* Hamburger */
@@ -169,7 +173,7 @@ const Navbar = () => {
 
         .navbar.scrolled .hamburger span,
         .navbar.menu-open .hamburger span {
-          background: var(--primary); /* dark over white navbar */
+          background: white;
         }
 
         /* Mobile menu */
@@ -210,9 +214,10 @@ const Navbar = () => {
           display: block;
           padding: 1rem 0;
           color: var(--primary);
-          font-weight: 600;
-          font-size: 0.95rem;
-          letter-spacing: 0.5px;
+          font-weight: 400;
+          font-size: 0.85rem;
+          letter-spacing: 2px;
+          text-transform: uppercase;
         }
 
         .mobile-menu a:hover,

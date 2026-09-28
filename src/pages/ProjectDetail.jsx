@@ -130,26 +130,26 @@ const ProjectDetail = () => {
         }
         .detail-hero-overlay {
           position: absolute; inset: 0;
-          background: linear-gradient(to top, rgba(10,29,55,0.95) 0%, rgba(10,29,55,0.3) 50%, transparent 100%);
+          background: linear-gradient(to top, rgba(12, 18, 43, 0.95) 0%, rgba(12, 18, 43, 0.3) 50%, transparent 100%);
         }
         .detail-hero .container { position: relative; z-index: 1; }
-        .back-btn { background: transparent; color: #ee7723; font-weight: 600; margin-bottom: 1rem; padding: 0; }
-        .detail-code { display: block; color: #ee7723; font-weight: 700; letter-spacing: 2px; font-size: 0.9rem; margin-bottom: 0.5rem; }
+        .back-btn { background: transparent; color: var(--accent); font-weight: 600; margin-bottom: 1rem; padding: 0; }
+        .detail-code { display: block; color: var(--accent); font-weight: 700; letter-spacing: 2px; font-size: 0.9rem; margin-bottom: 0.5rem; }
         .detail-hero h1 { color: white; font-size: 3rem; margin-bottom: 1rem; }
         .detail-hero-meta { display: flex; gap: 1.5rem; flex-wrap: wrap; }
         .detail-hero-meta span { color: #ccc; font-size: 0.95rem; display: flex; align-items: center; gap: 0.3rem; }
-        .status-badge { background: #27ae60; color: white; padding: 0.2rem 0.8rem; border-radius: 20px; font-size: 0.8rem !important; font-weight: 600; }
+        .status-badge { background: transparent; border: 1px solid white; color: white; padding: 0.2rem 1rem; font-size: 0.75rem !important; letter-spacing: 2px; text-transform: uppercase; font-weight: 400; }
 
         .detail-grid { display: grid; grid-template-columns: 1.5fr 1fr; gap: 4rem; }
-        .detail-main h2 { color: #0A1D37; margin-bottom: 1rem; }
+        .detail-main h2 { color: var(--primary); margin-bottom: 1rem; }
         .detail-main p { color: #555; line-height: 1.8; }
-        .detail-main h3 { color: #0A1D37; }
+        .detail-main h3 { color: var(--primary); }
         .features-list { list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem; margin-top: 1rem; }
         .features-list li { color: #444; display: flex; align-items: center; gap: 0.5rem; }
-        .feature-tick { color: #ee7723; font-weight: 700; font-size: 1.1rem; }
+        .feature-tick { color: var(--accent); font-weight: 700; font-size: 1.1rem; }
 
-        .info-card { background: #F4F7FA; border-radius: 12px; padding: 2rem; border-top: 4px solid #ee7723; }
-        .info-card h4 { color: #0A1D37; font-size: 1.2rem; margin-bottom: 1.5rem; }
+        .info-card { background: white; padding: 2.5rem; border: 1px solid rgba(0,0,0,0.04); border-radius: 0px; }
+        .info-card h4 { color: var(--primary); font-size: 1.2rem; margin-bottom: 1.5rem; }
         .info-row { display: flex; justify-content: space-between; padding: 0.7rem 0; border-bottom: 1px solid #ddd; font-size: 0.95rem; }
         .info-row span { color: #666; }
         .info-row:last-child { border-bottom: none; }
@@ -157,13 +157,13 @@ const ProjectDetail = () => {
         
         .more-projects { margin-top: 5rem; }
         .more-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
-        .more-card { border-radius: 10px; overflow: hidden; cursor: pointer; box-shadow: 0 5px 20px rgba(0,0,0,0.1); transition: transform 0.3s ease; background: #0A1D37; }
+        .more-card { border-radius: 0px; overflow: hidden; cursor: pointer; box-shadow: 0 5px 20px rgba(0,0,0,0.05); transition: transform 0.4s ease; background: var(--bg-soft); border: 1px solid rgba(0,0,0,0.04); }
         .more-card:hover { transform: translateY(-4px); }
         .more-card img { width: 100%; height: 160px; object-fit: cover; }
         .more-info { padding: 1rem 1.2rem; }
-        .more-info span { color: #ee7723; font-size: 0.8rem; font-weight: 700; }
-        .more-info h4 { color: white; font-size: 1rem; margin: 0.3rem 0; }
-        .more-info p { color: #aaa; font-size: 0.85rem; }
+        .more-info span { color: var(--accent); font-size: 0.75rem; font-weight: 400; letter-spacing: 2px; text-transform: uppercase; }
+        .more-info h4 { color: var(--primary); font-size: 1rem; margin: 0.5rem 0; font-weight: 400; }
+        .more-info p { color: var(--text-secondary); font-size: 0.85rem; }
 
         @media(max-width:768px) {
           .detail-grid { grid-template-columns: 1fr; }

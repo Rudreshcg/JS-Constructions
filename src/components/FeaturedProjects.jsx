@@ -58,7 +58,7 @@ const FeaturedProjects = () => {
         }
 
         .fp-card {
-          background: #0A1D37;
+          background: var(--primary);
           border-radius: 12px;
           overflow: hidden;
           cursor: pointer;
@@ -94,8 +94,8 @@ const FeaturedProjects = () => {
         }
 
         .fp-code {
-          background: rgba(10,29,55,0.85);
-          color: #ee7723;
+          background: rgba(43,58,140,0.85);
+          color: var(--accent);
           font-size: 0.75rem; font-weight: 700;
           padding: 0.25rem 0.6rem;
           border-radius: 4px; letter-spacing: 1px;
@@ -103,7 +103,7 @@ const FeaturedProjects = () => {
 
         .fp-sqft {
           background: rgba(255,255,255,0.95);
-          color: #0A1D37;
+          color: var(--primary);
           font-size: 0.8rem; font-weight: 700;
           padding: 0.25rem 0.6rem;
           border-radius: 4px;
@@ -112,7 +112,7 @@ const FeaturedProjects = () => {
         .fp-location {
           position: absolute;
           bottom: 0; left: 0; right: 0;
-          background: linear-gradient(to top, rgba(10,29,55,0.9), transparent);
+          background: linear-gradient(to top, rgba(43,58,140,0.9), transparent);
           color: #ddd;
           font-size: 0.8rem;
           padding: 1.5rem 0.8rem 0.6rem;
@@ -129,7 +129,7 @@ const FeaturedProjects = () => {
 
         .fp-view {
           background: transparent;
-          color: #ee7723;
+          color: var(--accent);
           font-size: 0.75rem; font-weight: 700;
           letter-spacing: 1px; padding: 0;
           white-space: nowrap;
