@@ -76,6 +76,19 @@ const ProjectDetail = () => {
                   <li key={i}><span className="feature-tick">✓</span> {f}</li>
                 ))}
               </ul>
+
+              {project.images && project.images.length > 1 && (
+                <div className="project-gallery">
+                  <h3 style={{ marginTop: '3rem', marginBottom: '1.5rem' }}>Project Gallery</h3>
+                  <div className="gallery-grid">
+                    {project.images.map((img, idx) => (
+                      <div className="gallery-item" key={idx}>
+                        <img src={img} alt={`${project.title} - ${idx + 1}`} />
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
             </div>
 
             {/* Right */}
@@ -148,6 +161,10 @@ const ProjectDetail = () => {
         .features-list li { color: #444; display: flex; align-items: center; gap: 0.5rem; }
         .feature-tick { color: var(--accent); font-weight: 700; font-size: 1.1rem; }
 
+        .project-gallery h3 { color: var(--primary); }
+        .gallery-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+        .gallery-item img { width: 100%; height: 250px; object-fit: cover; border-radius: 4px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+
         .info-card { background: white; padding: 2.5rem; border: 1px solid rgba(0,0,0,0.04); border-radius: 0px; }
         .info-card h4 { color: var(--primary); font-size: 1.2rem; margin-bottom: 1.5rem; }
         .info-row { display: flex; justify-content: space-between; padding: 0.7rem 0; border-bottom: 1px solid #ddd; font-size: 0.95rem; }
@@ -169,6 +186,7 @@ const ProjectDetail = () => {
           .detail-grid { grid-template-columns: 1fr; }
           .more-grid { grid-template-columns: 1fr; }
           .features-list { grid-template-columns: 1fr; }
+          .gallery-grid { grid-template-columns: 1fr; }
           .detail-hero h1 { font-size: 2rem; }
         }
       `}</style>
