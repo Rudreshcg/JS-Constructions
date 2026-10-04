@@ -3,22 +3,24 @@ import React from 'react';
 const Testimonials = () => {
   const testimonials = [
     {
-      name: "Suresh Gowda",
-      role: "Homeowner, Indiranagar",
-      image: "/assets/avatar-1.png",
-      text: "JS Constructions built our duplex in Indiranagar exactly as we envisioned. The quality of materials and workmanship is outstanding. Our neighbours constantly compliment the design!"
+      name: "Dr. Mallesh G B",
+      role: "Homeowner, Channapatna",
+      text: "JS Constructions delivered exactly what was promised. Our residence in Channapatna is beautifully constructed with top-notch materials. Their professionalism and attention to detail are commendable."
     },
     {
-      name: "Kavitha Reddy",
-      role: "Homeowner, Jayanagar",
-      image: "/assets/avatar-2.png",
-      text: "We built our dream home in Jayanagar with JS Constructions. They were transparent about costs, completed on time, and the finishing touches were simply beautiful. Highly recommended!"
+      name: "Mr. Deekshith Raj",
+      role: "Homeowner, Kunigal",
+      text: "Building our dream home in Kunigal with JS Constructions was a seamless experience. They maintained complete transparency, maximized the use of space, and delivered the modern elevation we envisioned."
     },
     {
-      name: "Manjunath Rao",
-      role: "Property Owner, Sadashivanagar",
-      image: "/assets/avatar-3.png",
-      text: "The independent villa they constructed for us in Sadashivanagar exceeded all expectations. From the foundation to the interiors, every detail was handled with great care and professionalism."
+      name: "Dr. Ramesh",
+      role: "Hospital Director, Chanpatna",
+      text: "JS Constructions managed our multi-story hospital project with exceptional professionalism. They understood the strict structural requirements for medical facilities and delivered a highly functional space."
+    },
+    {
+      name: "Mr. Kumar",
+      role: "Property Owner, Mandya",
+      text: "The grand residence they are constructing for us in Mandya is shaping up wonderfully. The team is dedicated, communicative, and clearly highly experienced with large-scale luxury projects."
     }
   ];
 
@@ -40,7 +42,6 @@ const Testimonials = () => {
               </div>
               <p className="testimonial-text">{t.text}</p>
               <div className="testimonial-footer">
-                <img src={t.image} alt={t.name} className="testimonial-avatar" />
                 <div className="testimonial-info">
                   <h4 className="testimonial-name">{t.name}</h4>
                   <p className="testimonial-role">{t.role}</p>
@@ -53,13 +54,15 @@ const Testimonials = () => {
 
       <style jsx>{`
         .testimonials-grid {
-          display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
           gap: 2rem;
           margin-top: 4rem;
         }
 
         .testimonial-card {
+          width: calc(33.333% - 1.34rem);
           padding: 3rem 2.5rem;
           background: white;
           border-radius: 0px;
@@ -93,14 +96,6 @@ const Testimonials = () => {
           margin-top: 1rem;
         }
 
-        .testimonial-avatar {
-          width: 60px;
-          height: 60px;
-          border-radius: 50%;
-          object-fit: cover;
-          border: 2px solid var(--accent);
-        }
-
         .testimonial-name {
           color: var(--primary);
           margin-bottom: 0.2rem;
@@ -113,9 +108,12 @@ const Testimonials = () => {
           font-weight: 600;
         }
 
+        @media (max-width: 992px) {
+          .testimonial-card { width: calc(50% - 1rem); }
+        }
         @media (max-width: 768px) {
-          .testimonials-grid { grid-template-columns: 1fr; margin-top: 2rem; }
-          .testimonial-card { padding: 2rem; }
+          .testimonials-grid { margin-top: 2rem; }
+          .testimonial-card { width: 100%; padding: 2rem; }
         }
       `}</style>
     </section>
