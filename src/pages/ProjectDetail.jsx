@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { projects } from '../data/projects';
 import SEO from '../components/SEO';
@@ -6,6 +6,7 @@ import SEO from '../components/SEO';
 const ProjectDetail = () => {
   const { id } = useParams();
   const navigate = useNavigate();
+  const [selectedImage, setSelectedImage] = useState(null);
   const project = projects.find(p => p.id === id);
 
   if (!project) {
@@ -46,7 +47,7 @@ const ProjectDetail = () => {
         schema={projectSchema}
       />
       {/* Hero Image */}
-      <div className="detail-hero" style={{ backgroundImage: `url(${project.image})` }}>
+      <div className="detail-hero" style={{ backgroundImage: `url("${project.image}")` }}>
         <div className="detail-hero-overlay"></div>
         <div className="container">
           <button className="back-btn" onClick={() => navigate('/projects')}>← Back to Projects</button>
@@ -77,18 +78,24 @@ const ProjectDetail = () => {
                 ))}
               </ul>
 
-              {project.images && project.images.length > 1 && (
-                <div className="project-gallery">
-                  <h3 style={{ marginTop: '3rem', marginBottom: '1.5rem' }}>Project Gallery</h3>
-                  <div className="gallery-grid">
-                    {project.images.map((img, idx) => (
-                      <div className="gallery-item" key={idx}>
-                        <img src={img} alt={`${project.title} - ${idx + 1}`} />
+              {(() => {
+                const displayImages = project.images || [project.image];
+                if (displayImages.length > 0) {
+                  return (
+                    <div className="project-gallery">
+                      <h3 style={{ marginTop: '3rem', marginBottom: '1.5rem' }}>Project Gallery</h3>
+                      <div className="gallery-grid">
+                        {displayImages.map((img, idx) => (
+                          <div className="gallery-item" key={idx} onClick={() => setSelectedImage(img)}>
+                            <img src={img} alt={`${project.title} - ${idx + 1}`} />
+                          </div>
+                        ))}
                       </div>
-                    ))}
-                  </div>
-                </div>
-              )}
+                    </div>
+                  );
+                }
+                return null;
+              })()}
             </div>
 
             {/* Right */}
@@ -129,6 +136,14 @@ const ProjectDetail = () => {
         </div>
       </section>
 
+      {/* Fullscreen Image Modal */}
+      {selectedImage && (
+        <div className="image-modal" onClick={() => setSelectedImage(null)}>
+          <span className="close-modal">&times;</span>
+          <img src={selectedImage} alt="Fullscreen View" onClick={(e) => e.stopPropagation()} />
+        </div>
+      )}
+
       <style jsx>{`
         .detail-hero {
           height: 520px;
@@ -163,7 +178,24 @@ const ProjectDetail = () => {
 
         .project-gallery h3 { color: var(--primary); }
         .gallery-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+        .gallery-item { cursor: pointer; transition: transform 0.3s ease; }
+        .gallery-item:hover { transform: scale(1.02); }
         .gallery-item img { width: 100%; height: 250px; object-fit: cover; border-radius: 4px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+
+        .image-modal {
+          position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+          background: rgba(0, 0, 0, 0.9); z-index: 9999;
+          display: flex; justify-content: center; align-items: center;
+          padding: 2rem; cursor: pointer;
+        }
+        .image-modal img {
+          max-width: 100%; max-height: 90vh; border-radius: 4px;
+          box-shadow: 0 10px 30px rgba(0,0,0,0.5); cursor: default;
+        }
+        .close-modal {
+          position: absolute; top: 20px; right: 30px;
+          color: white; font-size: 3rem; font-weight: bold; cursor: pointer;
+        }
 
         .info-card { background: white; padding: 2.5rem; border: 1px solid rgba(0,0,0,0.04); border-radius: 0px; }
         .info-card h4 { color: var(--primary); font-size: 1.2rem; margin-bottom: 1.5rem; }
