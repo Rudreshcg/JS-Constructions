@@ -31,7 +31,7 @@ const AboutUs = () => {
       <SEO
         title="About Us | JS Constructions Bengaluru"
         description="Learn about JS Constructions — founded in 2022 in Bengaluru. We specialize in luxury residences, commercial buildings, and more with a team of certified experts."
-        canonical="https://www.jsconstructions22.in/about"
+        canonical="https://www.jsconstructions22.in/our-business"
         schema={aboutSchema}
       />
       {/* Hero Banner */}

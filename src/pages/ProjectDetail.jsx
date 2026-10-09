@@ -18,12 +18,13 @@ const ProjectDetail = () => {
     );
   }
 
+  const projectImage = new URL(project.image, 'https://www.jsconstructions22.in').href;
   const projectSchema = {
     "@context": "https://schema.org",
     "@type": "CreativeWork",
     "name": project.title,
     "url": `https://www.jsconstructions22.in/projects/${project.id}`,
-    "image": `https://www.jsconstructions22.in${project.image}`,
+    "image": projectImage,
     "description": project.description,
     "creator": {
       "@type": "Organization",
@@ -44,6 +45,7 @@ const ProjectDetail = () => {
         title={`${project.title} | JS Constructions`}
         description={`${project.title} — ${project.category} project in ${project.location}. ${project.description?.slice(0, 120)}...`}
         canonical={`https://www.jsconstructions22.in/projects/${project.id}`}
+        image={project.image}
         schema={projectSchema}
       />
       {/* Hero Image */}

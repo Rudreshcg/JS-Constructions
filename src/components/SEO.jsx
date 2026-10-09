@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 
-const OG_IMAGE = 'https://www.jsconstructions22.in/assets/hero-premium.webp';
+const DEFAULT_OG_IMAGE = 'https://www.jsconstructions22.in/assets/hero-premium.webp';
 
 /**
  * SEO Component — sets page title, meta description, Open Graph, Twitter Card,
@@ -14,8 +14,10 @@ const OG_IMAGE = 'https://www.jsconstructions22.in/assets/hero-premium.webp';
  *     schema={{ ... }}   // optional JSON-LD object
  *   />
  */
-const SEO = ({ title, description, canonical, schema }) => {
+const SEO = ({ title, description, canonical, schema, image }) => {
   const DOMAIN = 'https://www.jsconstructions22.in';
+  const canonicalUrl = canonical || `${DOMAIN}/`;
+  const ogImage = image ? new URL(image, DOMAIN).href : DEFAULT_OG_IMAGE;
 
   useEffect(() => {
     // Title
@@ -51,24 +53,23 @@ const SEO = ({ title, description, canonical, schema }) => {
     setMeta({ name: 'keywords' }, 'construction company Bengaluru, residential construction, commercial construction, luxury villas Bengaluru, JS Constructions, building contractors Karnataka');
 
     // Canonical
-    setLink('canonical', canonical || DOMAIN);
+    setLink('canonical', canonicalUrl);
 
     // Open Graph
     setMeta({ property: 'og:type' }, 'website');
     setMeta({ property: 'og:site_name' }, 'JS Constructions');
     setMeta({ property: 'og:title' }, title || 'JS Constructions | Premium Construction in Bengaluru');
     setMeta({ property: 'og:description' }, description || 'JS Constructions offers premium residential and commercial construction services in Bengaluru since 2022.');
-    setMeta({ property: 'og:url' }, canonical || DOMAIN);
-    setMeta({ property: 'og:image' }, OG_IMAGE);
-    setMeta({ property: 'og:image:width' }, '1200');
-    setMeta({ property: 'og:image:height' }, '630');
+    setMeta({ property: 'og:url' }, canonicalUrl);
+    setMeta({ property: 'og:image' }, ogImage);
+    setMeta({ property: 'og:image:alt' }, title || 'JS Constructions construction project in Bengaluru');
     setMeta({ property: 'og:locale' }, 'en_IN');
 
     // Twitter Card
     setMeta({ name: 'twitter:card' }, 'summary_large_image');
     setMeta({ name: 'twitter:title' }, title || 'JS Constructions | Premium Construction in Bengaluru');
     setMeta({ name: 'twitter:description' }, description || 'JS Constructions offers premium residential and commercial construction services in Bengaluru since 2022.');
-    setMeta({ name: 'twitter:image' }, OG_IMAGE);
+    setMeta({ name: 'twitter:image' }, ogImage);
 
     // JSON-LD Structured Data
     const schemaId = 'seo-schema-ld';
@@ -84,7 +85,7 @@ const SEO = ({ title, description, canonical, schema }) => {
     } else if (existing) {
       existing.remove();
     }
-  }, [title, description, canonical, schema]);
+  }, [title, description, canonicalUrl, schema, ogImage]);
 
   return null;
 };

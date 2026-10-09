@@ -11,35 +11,24 @@ import CtaBanner from '../components/CtaBanner';
 
 const homeSchema = {
   "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "WebSite",
-      "name": "JS Constructions",
-      "url": "https://www.jsconstructions22.in",
-      "potentialAction": {
-        "@type": "SearchAction",
-        "target": "https://www.jsconstructions22.in/projects?q={search_term_string}",
-        "query-input": "required name=search_term_string"
-      }
-    },
-    {
-      "@type": "LocalBusiness",
-      "name": "JS Constructions",
-      "url": "https://www.jsconstructions22.in",
-      "logo": "https://www.jsconstructions22.in/assets/js%20logo%20round.png",
-      "image": "https://www.jsconstructions22.in/assets/hero-premium.webp",
-      "description": "JS Constructions offers premium residential and commercial construction services in Bengaluru since 2022.",
-      "telephone": "+91-7676534573",
-      "foundingDate": "2022",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Bengaluru",
-        "addressRegion": "Karnataka",
-        "addressCountry": "IN"
-      },
-      "areaServed": "Bengaluru"
-    }
-  ]
+  "@type": "LocalBusiness",
+  "name": "JS Constructions",
+  "url": "https://www.jsconstructions22.in/",
+  "logo": "https://www.jsconstructions22.in/assets/js%20logo%20round.png",
+  "image": "https://www.jsconstructions22.in/assets/hero-premium.webp",
+  "description": "JS Constructions offers premium residential and commercial construction services in Bengaluru since 2022.",
+  "telephone": "+91-7676534573",
+  "foundingDate": "2022",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Ullal Main Rd, Annapurneshwari Layout, Jnananjyothinagar, Railway Layout, Jnana Ganga Nagar",
+    "addressLocality": "Bengaluru",
+    "addressRegion": "Karnataka",
+    "postalCode": "560056",
+    "addressCountry": "IN"
+  },
+  "areaServed": "Bengaluru",
+  "sameAs": ["https://www.instagram.com/jsconstructions.co/"]
 };
 
 const Home = () => {
@@ -58,7 +47,7 @@ const Home = () => {
       <SEO
         title="JS Constructions | Premium Construction Company in Bengaluru"
         description="JS Constructions — trusted construction company in Bengaluru since 2022. We build luxury villas, duplex homes, and commercial spaces with excellence."
-        canonical="https://www.jsconstructions22.in"
+        canonical="https://www.jsconstructions22.in/"
         schema={homeSchema}
       />
       <Hero />
