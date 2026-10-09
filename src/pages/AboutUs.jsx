@@ -36,7 +36,7 @@ const AboutUs = () => {
       />
       {/* Hero Banner */}
       <div className="page-hero">
-        <div className="page-hero-overlay" style={{ backgroundImage: 'url(/assets/hero-bg-v2.png)' }}></div>
+        <div className="page-hero-overlay" style={{ backgroundImage: 'url(/assets/hero-premium.webp)' }}></div>
         <div className="container">
           <h1>About <span>JS Constructions</span></h1>
           <p>Building Excellence Since 2008</p>
@@ -91,7 +91,7 @@ const AboutUs = () => {
         }
         .about-hero-overlay {
           position: absolute; inset: 0;
-          background: url('/assets/hero-bg-v2.png') center/cover no-repeat;
+          background: url('/assets/hero-premium.webp') center/cover no-repeat;
           opacity: 0.25;
         }
         .about-hero .container { position: relative; z-index: 1; }

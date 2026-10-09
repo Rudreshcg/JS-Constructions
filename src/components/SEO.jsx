@@ -1,5 +1,7 @@
 import { useEffect } from 'react';
 
+const OG_IMAGE = 'https://www.jsconstructions22.in/assets/hero-premium.webp';
+
 /**
  * SEO Component — sets page title, meta description, Open Graph, Twitter Card,
  * canonical URL, and optional JSON-LD structured data dynamically.
@@ -14,7 +16,6 @@ import { useEffect } from 'react';
  */
 const SEO = ({ title, description, canonical, schema }) => {
   const DOMAIN = 'https://www.jsconstructions22.in';
-  const OG_IMAGE = `${DOMAIN}/assets/hero-bg-v2.png`;
 
   useEffect(() => {
     // Title

@@ -32,7 +32,7 @@ const ContactPage = () => {
       />
       {/* Page Hero Banner */}
       <div className="page-hero">
-        <div className="page-hero-overlay" style={{ backgroundImage: 'url(/assets/hero-bg-v2.png)' }}></div>
+        <div className="page-hero-overlay" style={{ backgroundImage: 'url(/assets/hero-premium.webp)' }}></div>
         <div className="container">
           <h1>Contact <span>Us</span></h1>
           <p>We'd love to hear from you. Let's build something great together.</p>

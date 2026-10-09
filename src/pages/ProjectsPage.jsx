@@ -34,7 +34,7 @@ const ProjectsPage = () => {
       />
       {/* Hero Banner */}
       <div className="page-hero">
-        <div className="page-hero-overlay" style={{ backgroundImage: 'url(/assets/hero-bg-v2.png)' }}></div>
+        <div className="page-hero-overlay" style={{ backgroundImage: 'url(/assets/hero-premium.webp)' }}></div>
         <div className="container">
           <h1>Our <span>Projects</span></h1>
           <p>Showcasing our finest work across Bangalore</p>
