@@ -29,6 +29,7 @@ const Navbar = () => {
 
         {/* Desktop Nav Links */}
         <ul className="nav-links">
+          <li><Link to="/" className={isActive('/')}>HOME</Link></li>
           <li><Link to="/our-business" className={isActive('/our-business')}>OUR BUSINESS</Link></li>
           <li><Link to="/projects" className={isActive('/projects')}>PROJECTS</Link></li>
           <li><Link to="/contact" className={isActive('/contact')}>CONTACT US</Link></li>
@@ -55,6 +56,7 @@ const Navbar = () => {
       {/* Mobile Menu */}
       <div className={`mobile-menu ${menuOpen ? 'open' : ''}`}>
         <ul>
+          <li><Link to="/" className={isActive('/')}>HOME</Link></li>
           <li><Link to="/our-business" className={isActive('/our-business')}>OUR BUSINESS</Link></li>
           <li><Link to="/projects" className={isActive('/projects')}>PROJECTS</Link></li>
           <li><Link to="/contact" className={isActive('/contact')}>CONTACT US</Link></li>

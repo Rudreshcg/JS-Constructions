@@ -59,7 +59,7 @@ const FeaturedProjects = () => {
 
         .fp-card {
           background: var(--primary);
-          border-radius: 12px;
+          border-radius: 4px;
           overflow: hidden;
           cursor: pointer;
           transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -94,11 +94,11 @@ const FeaturedProjects = () => {
         }
 
         .fp-code {
-          background: rgba(43,58,140,0.85);
-          color: var(--accent);
+          background: var(--accent);
+          color: white;
           font-size: 0.75rem; font-weight: 700;
           padding: 0.25rem 0.6rem;
-          border-radius: 4px; letter-spacing: 1px;
+          border-radius: 2px; letter-spacing: 1px;
         }
 
         .fp-sqft {

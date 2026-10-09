@@ -7,8 +7,8 @@ const aboutSchema = {
   "name": "JS Constructions",
   "url": "https://www.jsconstructions22.in",
   "logo": "https://www.jsconstructions22.in/assets/logo.jpg",
-  "foundingDate": "2008",
-  "description": "JS Constructions was founded in 2008 in Bengaluru. We specialize in premium residential and commercial construction.",
+  "foundingDate": "2022",
+  "description": "JS Constructions was founded in 2022 in Bengaluru. We specialize in premium residential and commercial construction.",
   "telephone": "+91-7676534573",
   "address": {
     "@type": "PostalAddress",
@@ -30,7 +30,7 @@ const AboutUs = () => {
     <div className="about-page">
       <SEO
         title="About Us | JS Constructions Bengaluru"
-        description="Learn about JS Constructions — founded in 2008 in Bengaluru. We specialize in luxury residences, commercial buildings, and more with a team of certified experts."
+        description="Learn about JS Constructions — founded in 2022 in Bengaluru. We specialize in luxury residences, commercial buildings, and more with a team of certified experts."
         canonical="https://www.jsconstructions22.in/about"
         schema={aboutSchema}
       />
@@ -39,7 +39,7 @@ const AboutUs = () => {
         <div className="page-hero-overlay" style={{ backgroundImage: 'url(/assets/hero-premium.webp)' }}></div>
         <div className="container">
           <h1>About <span>JS Constructions</span></h1>
-          <p>Building Excellence Since 2008</p>
+          <p>Building Excellence Since 2022</p>
         </div>
       </div>
 
@@ -48,7 +48,7 @@ const AboutUs = () => {
           <div className="about-intro-grid">
             <div className="about-intro-text">
               <h2 className="section-title">We Build Your <span className="highlight-dark">Vision</span></h2>
-              <p>JS Constructions was founded in 2008 with a singular vision: to create structures that stand the test of time, blending superior craftsmanship with innovative design. Based in Bengaluru, we have grown into one of the region's most trusted names in residential and commercial construction.</p>
+              <p>JS Constructions was founded in 2022 with a singular vision: to create structures that stand the test of time, blending superior craftsmanship with innovative design. Based in Bengaluru, we have grown into one of the region's most trusted names in residential and commercial construction.</p>
               <p>From luxury villas and duplex homes to large-scale commercial campuses, our portfolio speaks of our commitment to quality, transparency, and client satisfaction. We believe that a great building is not just a structure — it's a story.</p>
               <div className="about-stats-row">
                 <div className="about-stat"><span>4+</span><p>Years Experience</p></div>

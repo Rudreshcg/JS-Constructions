@@ -28,9 +28,9 @@ const homeSchema = {
       "url": "https://www.jsconstructions22.in",
       "logo": "https://www.jsconstructions22.in/assets/js%20logo%20round.png",
       "image": "https://www.jsconstructions22.in/assets/hero-premium.webp",
-      "description": "JS Constructions offers premium residential and commercial construction services in Bengaluru since 2008.",
+      "description": "JS Constructions offers premium residential and commercial construction services in Bengaluru since 2022.",
       "telephone": "+91-7676534573",
-      "foundingDate": "2008",
+      "foundingDate": "2022",
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Bengaluru",
@@ -57,7 +57,7 @@ const Home = () => {
     <div>
       <SEO
         title="JS Constructions | Premium Construction Company in Bengaluru"
-        description="JS Constructions — trusted construction company in Bengaluru since 2008. We build luxury villas, duplex homes, and commercial spaces with excellence."
+        description="JS Constructions — trusted construction company in Bengaluru since 2022. We build luxury villas, duplex homes, and commercial spaces with excellence."
         canonical="https://www.jsconstructions22.in"
         schema={homeSchema}
       />

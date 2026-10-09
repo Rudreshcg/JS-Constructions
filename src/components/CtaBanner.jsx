@@ -33,9 +33,7 @@ const CtaBanner = () => {
         .cta-bg {
           position: absolute;
           inset: 0;
-          background: 
-            radial-gradient(circle at 20% 50%, rgba(238,119,35,0.12) 0%, transparent 50%),
-            radial-gradient(circle at 80% 50%, rgba(238,119,35,0.08) 0%, transparent 50%);
+          background: repeating-linear-gradient(135deg, rgba(255,255,255,0.025) 0 1px, transparent 1px 28px);
         }
 
         .cta-container {
@@ -71,9 +69,9 @@ const CtaBanner = () => {
 
         .cta-btn-primary {
           background: var(--accent);
-          color: var(--primary);
+          color: white;
           padding: 1rem 2rem;
-          border-radius: 6px;
+          border-radius: 2px;
           font-weight: 700;
           font-size: 0.95rem;
           border: none;
@@ -84,8 +82,9 @@ const CtaBanner = () => {
 
         .cta-btn-primary:hover {
           background: white;
+          color: var(--primary);
           transform: translateY(-2px);
-          box-shadow: 0 10px 30px rgba(238,119,35,0.3);
+          box-shadow: 0 10px 30px rgba(184,35,41,0.22);
         }
 
         .cta-btn-outline {
@@ -95,7 +94,7 @@ const CtaBanner = () => {
           border: 2px solid rgba(255,255,255,0.4);
           color: white;
           padding: 1rem 2rem;
-          border-radius: 6px;
+          border-radius: 2px;
           font-weight: 600;
           font-size: 0.95rem;
           white-space: nowrap;
