@@ -1,69 +1,172 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Favicon -->
-    <link rel="icon" type="image/jpeg" href="/assets/logo.jpg" />
-    <link rel="apple-touch-icon" href="/assets/logo.jpg" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Primary SEO (fallback before React hydrates) -->
-    <title>JS Constructions | Premium Construction in Bengaluru</title>
-    <meta name="description" content="JS Constructions offers premium residential and commercial construction services in Bengaluru since 2022. Luxury villas, duplex homes & commercial projects." />
-    <meta name="robots" content="index, follow" />
-    <meta name="author" content="JS Constructions" />
-    <meta name="keywords" content="construction company Bengaluru, residential construction, commercial construction, luxury villas Bengaluru, JS Constructions, building contractors Karnataka" />
-    <meta name="theme-color" content="#0A1D37" />
+  <!-- Preconnect to Google Fonts for performance and Core Web Vitals -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-    <!-- Canonical -->
-    <link rel="canonical" href="https://www.jsconstructions22.in/" />
+  <!-- Favicon -->
+  <link rel="icon" type="image/jpeg" href="/assets/logo.jpg" />
+  <link rel="apple-touch-icon" href="/assets/logo.jpg" />
 
-    <!-- Open Graph -->
-    <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="JS Constructions" />
-    <meta property="og:title" content="JS Constructions | Premium Construction in Bengaluru" />
-    <meta property="og:description" content="JS Constructions offers premium residential and commercial construction services in Bengaluru since 2022." />
-    <meta property="og:url" content="https://www.jsconstructions22.in/" />
-    <meta property="og:image" content="https://www.jsconstructions22.in/assets/hero-premium.webp" />
-    <meta property="og:image:alt" content="Modern residential construction by JS Constructions in Bengaluru" />
-    <meta property="og:locale" content="en_IN" />
+  <!-- Primary SEO (Karnataka & Bangalore Geo-Targeting) -->
+  <title>JS Constructions | Premier Construction Company in Bangalore & Karnataka</title>
+  <meta name="description"
+    content="JS Constructions is a premier construction company in Bangalore & Karnataka since 2022. Expert turnkey residential house construction, luxury villas, duplex homes, commercial complexes & hospitals across Bengaluru, Kunigal, Channapatna, Mandya & Belagavi." />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+  <meta name="author" content="JS Constructions" />
+  <meta name="keywords"
+    content="construction company in Bangalore, construction company in Bengaluru, construction company in Karnataka, building contractors Bangalore, turnkey house construction Bengaluru, civil contractors Karnataka, luxury villa builders Bangalore, duplex house construction Bengaluru, building contractors Kunigal, hospital construction Channapatna, residential builders Belagavi, commercial construction Mandya, JS Constructions" />
+  <meta name="theme-color" content="#0C122B" />
 
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="JS Constructions | Premium Construction in Bengaluru" />
-    <meta name="twitter:description" content="JS Constructions offers premium residential and commercial construction services in Bengaluru since 2022." />
-    <meta name="twitter:image" content="https://www.jsconstructions22.in/assets/hero-premium.webp" />
+  <!-- Geo-Targeting Meta Tags for Karnataka & Bengaluru -->
+  <meta name="geo.region" content="IN-KA" />
+  <meta name="geo.placename" content="Bengaluru, Karnataka, India" />
+  <meta name="geo.position" content="12.9629;77.5028" />
+  <meta name="ICBM" content="12.9629, 77.5028" />
 
-    <!-- Business Structured Data (JSON-LD) -->
-    <script id="seo-schema-ld" type="application/ld+json">
+  <!-- Canonical -->
+  <link rel="canonical" href="https://www.jsconstructions22.in/" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="JS Constructions" />
+  <meta property="og:title" content="JS Constructions | Premier Construction Company in Bangalore & Karnataka" />
+  <meta property="og:description"
+    content="Leading turnkey residential & commercial construction company in Bangalore and across Karnataka. Luxury villas, duplexes, hospitals, and event halls built to perfection." />
+  <meta property="og:url" content="https://www.jsconstructions22.in/" />
+  <meta property="og:image" content="https://www.jsconstructions22.in/assets/hero-premium.webp" />
+  <meta property="og:image:alt" content="Premier residential and commercial construction by JS Constructions across Bangalore and Karnataka" />
+  <meta property="og:locale" content="en_IN" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="JS Constructions | Premier Construction Company in Bangalore & Karnataka" />
+  <meta name="twitter:description"
+    content="Leading turnkey residential & commercial construction company in Bangalore and across Karnataka. Luxury villas, duplexes, hospitals, and event halls built to perfection." />
+  <meta name="twitter:image" content="https://www.jsconstructions22.in/assets/hero-premium.webp" />
+
+  <!-- Business Structured Data (JSON-LD Schema Graph) -->
+  <script id="seo-schema-ld" type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "name": "JS Constructions",
-      "url": "https://www.jsconstructions22.in/",
-      "logo": "https://www.jsconstructions22.in/assets/js%20logo%20round.png",
-      "image": "https://www.jsconstructions22.in/assets/hero-premium.webp",
-      "description": "JS Constructions offers premium residential and commercial construction services in Bengaluru since 2022.",
-      "telephone": "+91-7676534573",
-      "foundingDate": "2022",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Ullal Main Rd, Annapurneshwari Layout, Jnananjyothinagar, Railway Layout, Jnana Ganga Nagar",
-        "addressLocality": "Bengaluru",
-        "addressRegion": "Karnataka",
-        "postalCode": "560056",
-        "addressCountry": "IN"
-      },
-      "areaServed": "Bengaluru",
-      "sameAs": [
-        "https://www.instagram.com/jsconstructions.co/"
+      "@graph": [
+        {
+          "@type": ["GeneralContractor", "HomeAndConstructionBusiness"],
+          "@id": "https://www.jsconstructions22.in/#business",
+          "name": "JS Constructions",
+          "alternateName": ["JS Constructions Bengaluru", "JS Construction Karnataka"],
+          "url": "https://www.jsconstructions22.in/",
+          "logo": "https://www.jsconstructions22.in/assets/logo.jpg",
+          "image": "https://www.jsconstructions22.in/assets/hero-premium.webp",
+          "description": "JS Constructions is a premier residential and commercial construction company based in Bengaluru, delivering turnkey building solutions, luxury villas, duplex homes, hospitals, and commercial projects across Karnataka since 2022.",
+          "telephone": "+91-7676534573",
+          "email": "constructionsjs22@gmail.com",
+          "priceRange": "₹₹ - ₹₹₹₹",
+          "currenciesAccepted": "INR",
+          "paymentAccepted": "Cash, Credit Card, Bank Transfer, UPI, Cheque",
+          "foundingDate": "2022",
+          "openingHoursSpecification": [
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+              "opens": "09:00",
+              "closes": "19:00"
+            }
+          ],
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Ullal Main Rd, Annapurneshwari Layout, Jnananjyothinagar, Railway Layout, Jnana Ganga Nagar",
+            "addressLocality": "Bengaluru",
+            "addressRegion": "Karnataka",
+            "postalCode": "560056",
+            "addressCountry": "IN"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 12.9629,
+            "longitude": 77.5028
+          },
+          "areaServed": [
+            { "@type": "City", "name": "Bengaluru" },
+            { "@type": "City", "name": "Bangalore" },
+            { "@type": "AdministrativeArea", "name": "Ullal, Bengaluru" },
+            { "@type": "AdministrativeArea", "name": "Nagarbhavi, Bengaluru" },
+            { "@type": "AdministrativeArea", "name": "Rajarajeshwari Nagar, Bengaluru" },
+            { "@type": "AdministrativeArea", "name": "Kengeri, Bengaluru" },
+            { "@type": "City", "name": "Kunigal" },
+            { "@type": "City", "name": "Channapatna" },
+            { "@type": "City", "name": "Mandya" },
+            { "@type": "City", "name": "Belagavi" },
+            { "@type": "AdministrativeArea", "name": "Tumakuru District" },
+            { "@type": "AdministrativeArea", "name": "Ramanagara District" },
+            { "@type": "State", "name": "Karnataka" }
+          ],
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Construction and Engineering Services",
+            "itemListElement": [
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Turnkey Residential Construction",
+                  "description": "Full-cycle construction of luxury villas, duplex houses, and independent bungalows across Bangalore and Karnataka."
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Commercial Building Construction",
+                  "description": "Construction of commercial event halls (chowtries), hospitals, and retail complexes in Karnataka."
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Architectural Design & 3D Elevation",
+                  "description": "Modern architectural floor plans, Vastu-compliant layouts, and photorealistic 3D elevations."
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "BBMP & BDA Plan Approval Assistance",
+                  "description": "End-to-end guidance for municipal plan sanctions, BBMP, BDA, and local panchayat approvals."
+                }
+              }
+            ]
+          },
+          "sameAs": [
+            "https://www.instagram.com/jsconstructions.co/"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://www.jsconstructions22.in/#website",
+          "url": "https://www.jsconstructions22.in/",
+          "name": "JS Constructions",
+          "description": "Premier Construction Company in Bangalore & Karnataka",
+          "publisher": {
+            "@id": "https://www.jsconstructions22.in/#business"
+          },
+          "inLanguage": "en-IN"
+        }
       ]
     }
-    </script>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+  </script>
+</head>
+
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
+</body>
+
 </html>

@@ -12,10 +12,11 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Close menu on route change
-  useEffect(() => {
-    setMenuOpen(false);
-  }, [location]);
+  const [prevPath, setPrevPath] = useState(location.pathname);
+  if (prevPath !== location.pathname) {
+    setPrevPath(location.pathname);
+    if (menuOpen) setMenuOpen(false);
+  }
 
   const isActive = (path) => location.pathname === path ? 'active-link' : '';
 
@@ -24,7 +25,7 @@ const Navbar = () => {
       <div className="container nav-container">
         {/* Logo */}
         <Link to="/" className="logo">
-          <img src="/assets/js%20logo%20round.png" alt="JS Constructions" className="logo-img" />
+          <img src="/assets/logo.jpg" alt="JS Constructions - Premier Construction Company in Bangalore & Karnataka" className="logo-img" />
         </Link>
 
         {/* Desktop Nav Links */}

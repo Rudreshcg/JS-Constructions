@@ -183,7 +183,17 @@ img {
     padding: 0 1.2rem;
   }
   .section-padding {
-    padding: 60px 0;
+    padding: 55px 0;
+  }
+  .section-title {
+    font-size: 2.1rem;
+  }
+  .btn-primary, .btn-outline, .btn-outline-dark {
+    letter-spacing: 1px;
+    font-size: 0.85rem;
+    padding: 0.8rem 1.4rem;
+    max-width: 100%;
+    box-sizing: border-box;
   }
   .page-hero {
     height: 300px;
@@ -194,10 +204,14 @@ img {
 }
 
 @media (max-width: 480px) {
-  .page-hero h1 { font-size: 1.7rem; }
+  .section-title { font-size: 1.8rem; }
+  .page-hero h1 { font-size: 1.65rem; }
   .btn-primary, .btn-outline {
-    padding: 0.75rem 1.5rem;
-    font-size: 0.85rem;
+    padding: 0.75rem 1.25rem;
+    font-size: 0.82rem;
+    letter-spacing: 0.8px;
+    width: 100%;
+    text-align: center;
   }
 }
 

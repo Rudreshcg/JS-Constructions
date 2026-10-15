@@ -1,86 +1,132 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
 
-  <!-- Home -->
+  <!-- Home Page -->
   <url>
     <loc>https://www.jsconstructions22.in/</loc>
-    <lastmod>2026-10-09</lastmod>
-    <changefreq>weekly</changefreq>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>daily</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://www.jsconstructions22.in/assets/hero-premium.webp</image:loc>
+      <image:title>JS Constructions - Premier Construction Company in Bangalore &amp; Karnataka</image:title>
+      <image:caption>Turnkey residential villas, duplex homes, and commercial construction across Karnataka</image:caption>
+    </image:image>
   </url>
 
-  <!-- About -->
+  <!-- About Us Page -->
   <url>
     <loc>https://www.jsconstructions22.in/our-business</loc>
-    <lastmod>2026-10-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://www.jsconstructions22.in/assets/about-image.jpg</image:loc>
+      <image:title>JS Constructions Engineering Team in Bangalore</image:title>
+      <image:caption>Civil engineers and architects delivering excellence across Karnataka since 2022</image:caption>
+    </image:image>
   </url>
 
   <!-- Projects Listing -->
   <url>
     <loc>https://www.jsconstructions22.in/projects</loc>
-    <lastmod>2026-10-09</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
 
-  <!-- Projects Detail -->
+  <!-- Projects Detail Pages -->
   <url>
     <loc>https://www.jsconstructions22.in/projects/chowtry-kunigal</loc>
-    <lastmod>2026-10-09</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.jsconstructions22.in/JS%20construction/commercial/chowtry/chowtry,%2050%20x%20150,%20kunigal,%202025,%20ongoing.jpg</image:loc>
+      <image:title>Commercial Chowtry Event Venue Construction in Kunigal Karnataka</image:title>
+      <image:caption>50x150 7,500 Sq.Ft commercial event hall built by JS Constructions in Kunigal Tumakuru</image:caption>
+    </image:image>
   </url>
 
   <url>
     <loc>https://www.jsconstructions22.in/projects/hospital-chanpatna</loc>
-    <lastmod>2026-10-09</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.jsconstructions22.in/JS%20construction/commercial/hospital/hospital,%2040%20x%2068,%20Chanpatna,%202024,%20ongoing.jpg</image:loc>
+      <image:title>Multi-Specialty Hospital Construction in Channapatna Ramanagara Karnataka</image:title>
+      <image:caption>Modern 40x68 commercial healthcare facility built by JS Constructions in Channapatna</image:caption>
+    </image:image>
   </url>
 
   <url>
     <loc>https://www.jsconstructions22.in/projects/res-dr-mallesh-1</loc>
-    <lastmod>2026-10-09</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.75</priority>
+    <image:image>
+      <image:loc>https://www.jsconstructions22.in/JS%20construction/residential/Dr%20Mallesh%20G%20B/Dr%20Mallesh%20G%20B,%2030_45,%20Gowdagere,%20channapatna,%20Completed.jpg</image:loc>
+      <image:title>Dr. Mallesh Residence Construction in Gowdagere Channapatna Karnataka</image:title>
+      <image:caption>Completed 30x45 luxury residential home built by JS Constructions</image:caption>
+    </image:image>
   </url>
 
   <url>
     <loc>https://www.jsconstructions22.in/projects/res-dr-mallesh-2</loc>
-    <lastmod>2026-10-09</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.75</priority>
+    <image:image>
+      <image:loc>https://www.jsconstructions22.in/JS%20construction/residential/Dr%20Mallesh%20G%20B/Dr%20Mallesh%20G%20B,%2040_40,%20Belagavi,%20on-going.jpg</image:loc>
+      <image:title>Dr. Mallesh Duplex Residence in Belagavi Karnataka</image:title>
+      <image:caption>40x40 premium residential duplex under construction by JS Constructions in Belagavi</image:caption>
+    </image:image>
   </url>
 
   <url>
     <loc>https://www.jsconstructions22.in/projects/res-deekshith</loc>
-    <lastmod>2026-10-09</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.75</priority>
+    <image:image>
+      <image:loc>https://www.jsconstructions22.in/JS%20construction/residential/Mr%20Deekshith%20raj,%2030_55,%20Kunigal,%20Completed.jpg</image:loc>
+      <image:title>Deekshith Raj Modern Residence in Kunigal Karnataka</image:title>
+      <image:caption>Completed 30x55 residential home built by JS Constructions in Kunigal</image:caption>
+    </image:image>
   </url>
 
   <url>
     <loc>https://www.jsconstructions22.in/projects/res-kumar</loc>
-    <lastmod>2026-10-09</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.75</priority>
+    <image:image>
+      <image:loc>https://www.jsconstructions22.in/JS%20construction/residential/Mr%20Kumar,%2090_78,%20Mandya,%20Ongoing.jpg</image:loc>
+      <image:title>Kumar Grand Villa Residence in Mandya Karnataka</image:title>
+      <image:caption>Massive 90x78 7,020 Sq.Ft luxury villa under construction by JS Constructions in Mandya</image:caption>
+    </image:image>
   </url>
 
   <url>
     <loc>https://www.jsconstructions22.in/projects/res-pradeep</loc>
-    <lastmod>2026-10-09</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.75</priority>
+    <image:image>
+      <image:loc>https://www.jsconstructions22.in/JS%20construction/residential/Pradeep,%2035_40,%20Kunigal,%20Ongoing.jpg</image:loc>
+      <image:title>Pradeep Modern Home Build in Kunigal Karnataka</image:title>
+      <image:caption>35x40 contemporary home under construction by JS Constructions in Kunigal</image:caption>
+    </image:image>
   </url>
 
-  <!-- Contact -->
+  <!-- Contact Page -->
   <url>
     <loc>https://www.jsconstructions22.in/contact</loc>
-    <lastmod>2026-10-09</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.85</priority>
   </url>
 
 </urlset>

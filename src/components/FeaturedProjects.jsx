@@ -12,7 +12,7 @@ const FeaturedProjects = () => {
         <div className="fp-header">
           <div>
             <h2 className="section-title">Featured <span className="highlight-dark">Projects</span></h2>
-            <p className="section-subtitle">A glimpse at our finest residential work across Bangalore.</p>
+            <p className="section-subtitle">Explore benchmark residential and commercial construction projects completed and ongoing across Bengaluru and Karnataka.</p>
           </div>
           <button className="btn-primary" onClick={() => navigate('/projects')}>View All Projects →</button>
         </div>
@@ -21,7 +21,7 @@ const FeaturedProjects = () => {
           {featured.map((project) => (
             <div className="fp-card" key={project.id} onClick={() => navigate(`/projects/${project.id}`)}>
               <div className="fp-image">
-                <img src={project.image} alt={project.title} loading="lazy" />
+                <img src={project.image} alt={`${project.title} - Construction Project in ${project.fullLocation || project.location} by JS Constructions`} loading="lazy" />
                 <div className="fp-badges">
                   <span className="fp-code">{project.code}</span>
                   <span className="fp-sqft">{project.sqft}</span>
@@ -143,7 +143,10 @@ const FeaturedProjects = () => {
 
         @media(max-width: 600px) {
           .fp-grid { grid-template-columns: 1fr; }
-          .fp-header { flex-direction: column; align-items: flex-start; }
+          .fp-header { flex-direction: column; align-items: stretch; gap: 1rem; }
+          .fp-header .btn-primary { width: 100%; text-align: center; padding: 0.85rem 1.2rem; font-size: 0.82rem; }
+          .fp-body { flex-direction: column; align-items: flex-start; gap: 0.6rem; padding: 1rem 1.1rem; }
+          .fp-view { align-self: flex-start; font-size: 0.8rem; }
         }
       `}</style>
     </section>

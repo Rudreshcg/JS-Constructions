@@ -21,8 +21,8 @@ const ProjectDetail = () => {
   const projectImage = new URL(project.image, 'https://www.jsconstructions22.in').href;
   const projectSchema = {
     "@context": "https://schema.org",
-    "@type": "CreativeWork",
-    "name": project.title,
+    "@type": ["CreativeWork", "RealEstateListing"],
+    "name": `${project.title} - ${project.category} Construction in ${project.fullLocation || project.location}`,
     "url": `https://www.jsconstructions22.in/projects/${project.id}`,
     "image": projectImage,
     "description": project.description,
@@ -33,7 +33,13 @@ const ProjectDetail = () => {
     },
     "locationCreated": {
       "@type": "Place",
-      "name": project.location
+      "name": project.fullLocation || project.location,
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": project.location,
+        "addressRegion": "Karnataka",
+        "addressCountry": "IN"
+      }
     }
   };
 
@@ -42,10 +48,16 @@ const ProjectDetail = () => {
   return (
     <div className="project-detail-page">
       <SEO
-        title={`${project.title} | JS Constructions`}
-        description={`${project.title} — ${project.category} project in ${project.location}. ${project.description?.slice(0, 120)}...`}
+        title={`${project.title} | Construction in ${project.location}, Karnataka | JS Constructions`}
+        description={`${project.title} — ${project.category} construction by JS Constructions in ${project.fullLocation || project.location}, Karnataka. ${project.description.slice(0, 140)}...`}
         canonical={`https://www.jsconstructions22.in/projects/${project.id}`}
         image={project.image}
+        keywords={`${project.title}, ${project.category} construction ${project.location}, building contractors ${project.district || 'Karnataka'}, turnkey construction Karnataka, JS Constructions`}
+        breadcrumbs={[
+          { name: 'Home', item: '/' },
+          { name: 'Projects', item: '/projects' },
+          { name: project.title, item: `/projects/${project.id}` }
+        ]}
         schema={projectSchema}
       />
       {/* Hero Image */}
@@ -56,7 +68,7 @@ const ProjectDetail = () => {
           <span className="detail-code">{project.code}</span>
           <h1>{project.title}</h1>
           <div className="detail-hero-meta">
-            <span>📍 {project.location}</span>
+            <span>📍 {project.fullLocation || `${project.location}, Karnataka`}</span>
             <span>📐 {project.sqft}</span>
             <span>📅 {project.year}</span>
             <span className={`status-badge ${project.status.toLowerCase()}`}>{project.status}</span>

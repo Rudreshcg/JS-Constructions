@@ -114,8 +114,16 @@ const CtaBanner = () => {
         }
 
         @media(max-width: 480px) {
-          .cta-text h2 { font-size: 1.8rem; }
-          .cta-btn-primary, .cta-btn-outline { padding: 0.9rem 1.5rem; font-size: 0.9rem; }
+          .cta-text h2 { font-size: 1.7rem; }
+          .cta-actions { flex-direction: column; width: 100%; gap: 0.8rem; }
+          .cta-btn-primary, .cta-btn-outline {
+            width: 100%;
+            padding: 0.85rem 1.25rem;
+            font-size: 0.85rem;
+            text-align: center;
+            justify-content: center;
+            box-sizing: border-box;
+          }
         }
       `}</style>
     </section>

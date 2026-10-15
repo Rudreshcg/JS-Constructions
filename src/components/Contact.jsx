@@ -14,22 +14,25 @@ const Contact = () => {
             <div className="info-item">
               <div className="info-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg></div>
               <div>
-                <h4>Our Office</h4>
+                <h4>Registered Office (Bengaluru HQ)</h4>
                 <p>Ullal Main Rd, Annapurneshwari Layout, Jnananjyothinagar, Railway Layout, Jnana Ganga Nagar, Bengaluru, Karnataka 560056</p>
+                <p style={{ fontSize: '0.82rem', color: 'var(--accent)', marginTop: '0.3rem', fontWeight: 600 }}>Active Projects Across: Bengaluru · Tumakuru · Ramanagara · Mandya · Belagavi</p>
               </div>
             </div>
             <div className="info-item">
               <div className="info-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg></div>
               <div>
-                <h4>Call Us</h4>
-                <p>(+91) 7676534573</p>
+                <h4>Call / WhatsApp</h4>
+                <p><a href="tel:+917676534573" style={{ fontWeight: 600, color: 'var(--primary)' }}>(+91) 7676534573</a></p>
+                <p style={{ fontSize: '0.82rem', color: '#666' }}>Mon - Sat: 9:00 AM - 7:00 PM</p>
               </div>
             </div>
             <div className="info-item">
               <div className="info-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg></div>
               <div>
                 <h4>Email Us</h4>
-                <p>info@jsconstructions.com</p>
+                <p><a href="mailto:constructionsjs22@gmail.com" style={{ wordBreak: 'break-word' }}>constructionsjs22@gmail.com</a></p>
+                <p style={{ fontSize: '0.82rem', color: '#666' }}>We respond within 24 hours</p>
               </div>
             </div>
           </div>
@@ -148,6 +151,12 @@ const Contact = () => {
           .contact-form-container { padding: 2rem 1.5rem; }
           .info-item { gap: 1rem; }
           .info-icon { width: 42px; height: 42px; font-size: 1.2rem; }
+        }
+
+        @media (max-width: 480px) {
+          .contact-form-container { padding: 1.5rem 1rem; }
+          .form-group input, .form-group textarea { padding: 0.85rem; font-size: 0.9rem; }
+          .contact-form .btn-primary { padding: 0.85rem 1rem; font-size: 0.85rem; letter-spacing: 1px; }
         }
       `}</style>
     </section>

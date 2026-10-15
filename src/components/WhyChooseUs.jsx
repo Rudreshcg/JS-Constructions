@@ -20,7 +20,7 @@ const WhyChooseUs = () => {
     {
       icon: <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg>,
       title: 'Expert Engineers',
-      desc: 'Our certified structural engineers and architects bring years of residential expertise to every Bangalore project we undertake.'
+      desc: 'Our certified structural engineers and architects bring deep engineering expertise to every residential and commercial project we undertake across Bangalore and Karnataka.'
     }
   ];
 
@@ -29,7 +29,7 @@ const WhyChooseUs = () => {
       <div className="container">
         <div className="section-header text-center">
           <h2 className="section-title">Why <span className="highlight-dark">Choose Us</span></h2>
-          <p className="section-subtitle">What sets JS Constructions apart from the rest in Bangalore's residential construction landscape.</p>
+          <p className="section-subtitle">What sets JS Constructions apart as a premier builder in Bangalore and Karnataka's construction landscape.</p>
         </div>
 
         <div className="why-grid">
